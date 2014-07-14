@@ -1,0 +1,21 @@
+.carousel{
+	
+}
+
+.carousel_item{
+	padding-left: 10px;
+	padding-right: 10px;
+	width: auto;
+	text-align: center;
+}
+
+.carousel_item img{
+	height: 135px;
+	width: auto;
+}
+
+.carousel_text{
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
