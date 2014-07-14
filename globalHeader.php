@@ -28,16 +28,3 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="jquery.css">
 		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="javascript/owl.carousel.min.css">
-		<link rel="stylesheet" href="javascript/owl.theme.default.min.css">
-		<script src="javascript/owl.carousel.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('.owl-carousel').owlCarousel({
-					items: 7,
-					autoWidth : false,
-					nav : false,
-					dots : false
-				})
-			});
-		</script>

@@ -66,12 +66,13 @@ if(sizeof($categoryExploded) === 3){
 			<?php
 
 			foreach($data as $work){
+				if(!categoryEqual($work['Category'], $category)) continue;
 				echo "<div style='padding-left: 105px; padding-bottom: 5px;'>";
 				echo "<div style='float:left;'>";
 				echo "<a href='video.php?url=" . $work['FileLocation'] . "&cat=" . $work['Category'] . "'>";
 				echo '<img style="height: 135px; width: auto; padding-right: 5px;" src="Thumbnails/' . str_replace("\\", "/", $work['ThumbnailImage']) . '">';
 				echo "</div>";
-				echo "<div style='height: 135px; display: table-cell; vertical-align: middle;'>";
+				echo "<div style='width:550px; height: 135px; display: table-cell; vertical-align: middle;'>";
 				echo "<h3 style='margin-bottom:0px; padding-top:0px; margin-top:-10px; float:left;'>" . $work['Title'] . "</h3></a>";
 				if($work["Length"] != "") echo "<div style='padding-left: 5px; display: table-cell;'> <b>[</b>" . $work['Length'] . "<b>]</b></div>";
 				echo "<div style='clear:both; padding-left: 15px; text-align:justify; width:450px;'>";

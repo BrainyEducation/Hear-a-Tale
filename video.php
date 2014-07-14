@@ -81,7 +81,7 @@ if($sourceCategory != ""){
 				background-color: rgba(156, 207, 255, 1)
 			}
 			.flowplayer {
-				background-color: #dddddd
+				background-color: rgba(222, 222, 222, 0)
 			}
 		</style>
 		<script src="//releases.flowplayer.org/5.4.6/flowplayer.min.js"></script>
@@ -131,6 +131,7 @@ if($sourceCategory != ""){
 					if($sourceCategory != ""){
 						echo "<a href='subcategory.php?cat=" . $sourceCategory . "'>";
 						if(file_exists($thumbnailCat)) echo "<img src='" . $thumbnailCat . "' style='width:50px;'>";
+						if($categoryName == "Children") $categoryName = "Children's Section";
 						echo $categoryName . ": ";
 						echo "</a>";
 					}
@@ -143,12 +144,26 @@ if($sourceCategory != ""){
 			</legend>
 		</fieldset>
 
+		<?php if(substr($url, -4) === ".mp3"){ ?>
+			<div style='width:300px; height:auto; background-color:#dddddd;'>
+
+				<img style='width=auto; height:auto; display: table; margin:0 auto;' src='Thumbnails/<?php echo $play['ThumbnailImage']; ?>'>
+
+			</div>
+		<?php } ?>
+
 		<div style='margin: 0px auto;' data-swf="//releases.flowplayer.org/5.4.6/flowplayer.swf"
 		class="flowplayer fixed-controls no-toggle play-button color-light"
 		data-ratio="0.5625" data-embed="false">
+			<?php if(substr($url, -4) === ".mp3"){ ?>
+			<audio controls preload="auto">
+				<source type="audio/mp3" src="http://podcasting.gcsu.edu/4DCGI/Podcasting/GRU/Episodes/<?php echo $url;	?>" >
+			</audio>
+			<?php } else { ?>
 			<video preload="auto">
 				<source type="video/mp4" src="http://podcasting.gcsu.edu/4DCGI/Podcasting/GRU/Episodes/<?php echo $url;	?>"/>
 			</video>
+			<?php } ?>
 		</div>
 
 		<br><br><br>

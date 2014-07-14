@@ -23,7 +23,7 @@ function getDataFromSheet() {
 		$work['Title'] = $col[1];
 		$work['Chapter'] = $col[2];
 		$work['FileLocation'] = $col[3];
-		$work['ThumbnailImage'] = $col[4];
+		$work['ThumbnailImage'] = str_replace("\\", "/", $col[4]);
 		$work['Description'] = $col[11];
 		$work['Length'] = $col[9];
 		$category = "";
@@ -61,11 +61,15 @@ function getAllInCategory($query) {
 	$matches = array();
 	foreach ($data as $work) {
 		//category is query or is in a subcategory of query
-		if($work['Category'] == $query || substr($work['Category'], strlen($query), 1) == "/"){
+		if(categoryEqual($work['Category'], $query)){
 			array_push($matches, $work);
 		}
 	}
 	return $matches;
+}
+
+function categoryEqual($query, $against){
+	return $query == $against || strpos($query, $against . '/') === 0;
 }
 
 function titleCarousel($category) {
@@ -85,6 +89,30 @@ function titleCarousel($category) {
 		echo '<div class="carousel_text">' . readyHTML($work['Title']) . '</div>' . PHP_EOL;
 		echo '</a>' . PHP_EOL;
 		echo '</div>' . PHP_EOL;
+	}
+	echo '</div>' . PHP_EOL;
+}
+
+function twoRowTitleCarousel($category) {
+	$data = getAllInCategory($category);
+	shuffle($data);
+	echo '<div class="owl-carousel">' . PHP_EOL;
+	$max = 14;
+	for ($x = 0; $x < min($max, count($data)); $x++) {
+		$work = $data[$x];
+		if ($work['ThumbnailImage'] == "" || $work['Title'] == "" || getimagesize('Thumbnails/' . str_replace("\\", "/", $work['ThumbnailImage']))[1] > 120){
+			$max++;
+			continue;
+		}
+		echo '<div class="carousel_item">' . PHP_EOL;
+		echo '<a href="video.php?url=' . $work['FileLocation'] . '">' . PHP_EOL;
+		echo '<img src="Thumbnails/' . str_replace("\\", "/", $work['ThumbnailImage']) . '">' . PHP_EOL;
+		echo '<div class="carousel_text">' . readyHTML($work['Title']) . '</div>' . PHP_EOL;
+		echo '</a>' . PHP_EOL;
+		echo '</div>' . PHP_EOL;
+		if(($x - ($max - 14)) == 6){
+			echo '</div><div class="owl-carousel">';
+		}
 	}
 	echo '</div>' . PHP_EOL;
 }
