@@ -11,7 +11,6 @@ function readyHTML($text) {
 	return utf8_decode(htmlentities($text));
 }
 
-//loaded data from MySQL and returns it as an array
 function getDataFromSheet() {
 	$url = "https://docs.google.com/spreadsheet/pub?key=0AgqQsk5IC_NSdHI3MC03emJTSHMwbWVvRTFCTWt0blE&output=csv";
     $file = fopen($url, 'r');
@@ -137,7 +136,7 @@ function authorCarousel($category) {
 		if ($work['ThumbnailImage'] == "" || $work['Title'] == "")
 			continue;
 		echo '<div class="carousel_item">' . PHP_EOL;
-		echo '<a href="video.php?url=' . $work['FileLocation'] . '">' . PHP_EOL;
+		echo '<a href="adult/workslist.php?author=' . $work['Author'] . '">' . PHP_EOL;
 		echo '<img src="Thumbnails/' . str_replace("\\", "/", $work['ThumbnailImage']) . '">' . PHP_EOL;
 		echo '<div class="carousel_text">' . readyHTML($work['Author']) . '</div>' . PHP_EOL;
 		echo '</a>' . PHP_EOL;
