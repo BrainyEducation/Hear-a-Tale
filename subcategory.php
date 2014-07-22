@@ -74,11 +74,20 @@ if(sizeof($categoryExploded) === 3){
 				echo "<a href='video.php?url=" . $work['FileLocation'] . "&cat=" . $work['Category'] . "'>";
 				echo '<img style="height: 135px; width: auto; padding-right: 5px;" src="Thumbnails/' . str_replace("\\", "/", $work['ThumbnailImage']) . '">';
 				echo "</div>";
-				echo "<div style='width:550px; height: 135px; display: table-cell; vertical-align: middle;'>";
+				echo "<div style='width:600px; height: 135px; display: table-cell; vertical-align: middle;'>";
 				echo "<h3 style='margin-bottom:0px; padding-top:0px; margin-top:-10px; float:left;'>" . $work['Title'] . "</h3></a>";
-				if($work["Length"] != "") echo "<div style='padding-left: 5px; display: table-cell;'> <b>[</b>" . $work['Length'] . "<b>]</b></div>";
+				if($work["Length"] != "" || $work["Target"] != ""){
+					echo "<div style='clear:both; padding-left: 5px; display: table-cell;'>";
+					if($work["Target"] != ""){
+						echo "<a title='Click for more info' href='ABOUT_storyAppeal.php'>";
+						echo "<img style='width:15px' src='images/target_audience/" . $work["Target"] . ".png'></a>";
+					}
+					if($work["Length"] != "") echo " <b>[</b>" . $work['Length'] . "<b>]</b> ";
+					echo "</div>";
+				}
 				echo "<div style='clear:both; padding-left: 15px; text-align:justify; width:450px;'>";
 				echo $work['Description'];
+				if($work["Words"] != "") echo " " . $work["Words"] . " words.";
 				echo "</div></div></div>";
 			}
 

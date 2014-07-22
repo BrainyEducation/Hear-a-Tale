@@ -1,5 +1,5 @@
 <?php
-require_once ('functions2.php');
+require_once ($_SERVER['DOCUMENT_ROOT'] . 'functions2.php');
 
 
 ?>
@@ -16,21 +16,21 @@ require_once ('functions2.php');
 		<?php
 		include ($_SERVER['DOCUMENT_ROOT'] . '/globalHeader.php');
 		?>
-		
+
 	</head>
 
 	<body>
-	
+
 		<?php
 		include ($_SERVER['DOCUMENT_ROOT'] . '/globalBody.php');
 		?>
-	
+
 
 		<div class="span9" style="margin-left:5px; margin-right:5px;">
 			<div style="clear: both;"></div>
-			
-			
-			
+
+
+
 		<?php
 		include ($_SERVER['DOCUMENT_ROOT'] . '/globalFooter.php');
 		?>

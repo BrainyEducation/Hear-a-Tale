@@ -37,3 +37,5 @@
     <!-- end footer menu -->
 
 </div>
+<br><br>
+<img src="images/einstein-small.png" style="width:75%">

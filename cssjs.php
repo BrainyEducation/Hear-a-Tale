@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="http://www.gru.edu/css/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="gru_style/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="gru_style/superfish.css" type="text/css" />
 	<link rel="stylesheet" href="gru_style/template.css" type="text/css" />
 	<link rel="stylesheet" href="gru_style/custom.css" type="text/css" />
@@ -11,7 +11,7 @@
 	<script>window.jQuery || document.write('<script src="http://www.gru.edu/js/jquery-1.8.2.min.js">\x3C/script>')</script>
 	<script src="http://www.gru.edu/js/jquery.noconflict.js" type="text/javascript"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.1/modernizr.min.js" type="text/javascript"></script>
-	
+
 
 	<!--[if lte IE 9]>
 		<link rel="stylesheet" type="text/css" href="http://www.gru.edu/css/fixes.css" />

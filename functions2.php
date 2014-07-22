@@ -80,7 +80,7 @@ function titleCarousel($category) {
 	$max = 7;
 	for ($x = 0; $x < min($max, count($data)); $x++) {
 		$work = $data[$x];
-		if ($work['ThumbnailImage'] == "" || $work['Title'] == ""){
+		if ($work['ThumbnailImage'] == "" || $work['Title'] == "" || $work['FileLocation'] == ""){
 			$max++;
 			continue;
 		}
@@ -101,7 +101,7 @@ function twoRowTitleCarousel($category) {
 	$max = 14;
 	for ($x = 0; $x < min($max, count($data)); $x++) {
 		$work = $data[$x];
-		if ($work['ThumbnailImage'] == "" || $work['Title'] == "" || getimagesize('Thumbnails/' . str_replace("\\", "/", $work['ThumbnailImage']))[1] > 120){
+		if ($work['ThumbnailImage'] == "" || $work['Title'] == "" || $work['FileLocation'] == "" || getimagesize('Thumbnails/' . str_replace("\\", "/", $work['ThumbnailImage']))[1] > 120){
 			$max++;
 			continue;
 		}
@@ -146,10 +146,24 @@ function authorCarousel($category) {
 }
 
 function error404($what){
-	$emotes = array(":(",":o",":O","D:",":c",":$","ಠ_ಠ", "(>_<)", "(?_?)", "(-_-)", "(~_~)", "(╯°□°）╯︵ ┻━┻", ":(", "ლ(ಠ益ಠლ)﻿", "( ͡° ͜ʖ ͡°)");
+	$emotes = array(":(",":o",":O","D:",":c",":$","ಠ_ಠ", "(>_<)", "(?_?)", "(-_-)", "(~_~)", "(╯°□°）╯︵ ┻━┻", ":(", "ლ(ಠ益ಠლ)﻿");
 	$error = "<div style='text-align:center;'> <br><h3>The <i>" . $what . "</i> you were looking for could not be found...<br><br>";
 	$error .= $emotes[rand(0, count($emotes)) - 1];
-	$error .= "<br><br>Please go back and try again!</h3> </div><br><br>";
+	$error .= "<br><br>Please go back and try again!</h3> </div><br><br><br>";
+	$error .= "<table style='width:100%;'>
+		<tr align='center'>
+			<td><a href='children.php'><img src='section_icons/Children.png'></a></td>
+			<td><a href='category.php?cat=Children/Rhymes'><img src='section_icons/Children!Rhymes.png'></a></td>
+			<td><a href='category.php?cat=Children/Stories'><img src='section_icons/Children!Stories.png'></a></td>
+			<td><a href='category.php?cat=Children/Rhymes and Stories'><img src='section_icons/Children!Rhymes_and_Stories.png'></a></td>
+		<tr>
+		<tr align='center' valign='top'>
+			<td>Children's Section</td>
+			<td>Rhymes</td>
+			<td>Stories</td>
+			<td>Rhymes and Stories</td>
+		</tr>
+	</table>";
 	echo $error;
 }
 

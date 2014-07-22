@@ -28,6 +28,8 @@ require_once ('functions2.php');
 		<div class="span9" style="margin-left:5px; margin-right:5px;">
 			<div style="clear: both;"></div>
 			<div id="aboutContainer">
+				<img src="images/einstein-small.png" style="width:auto">
+
 				<a id="introduction"></a>
 				<h3>Introduction</h3>
 
