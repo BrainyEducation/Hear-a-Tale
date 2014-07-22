@@ -3,6 +3,8 @@ require_once ('functions2.php');
 
 $category = $_GET['cat'];
 
+if($category == "Children") header( 'Location: children.php' ) ;
+
 $data = getAllInCategory($category);
 
 $categoryExploded = explode("/", $category);

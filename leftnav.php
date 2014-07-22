@@ -14,7 +14,7 @@
 
     <ul class="menu">
         <li><a href='index.php'>Home</a></li>
-        <li><a href='children.php'>Children's Section <img src = "images/Gingerbread Man.jpg" id="children_sidebar"></a></li>
+        <li><a href='children.php'>Children's Section <img style="width:50px" src = "section_icons/Children.png" id="children_sidebar"></a></li>
         <li><a href='adults.php'>Students and Adults</a></li>
         <li><a href='southern.php'>Southern Literature</a></li>
         <li><a href="about.php" id="about_menu" href='#'>About</a>

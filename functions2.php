@@ -19,17 +19,19 @@ function getDataFromSheet() {
 	fgetcsv($file, ","); //skip the first line
     while (($col = fgetcsv($file, ",")) != false) {
   		$work = array();
-		$work['Author'] = $col[0];
-		$work['Title'] = $col[1];
-		$work['Chapter'] = $col[2];
-		$work['FileLocation'] = $col[3];
-		$work['ThumbnailImage'] = str_replace("\\", "/", $col[4]);
+		$work['Title'] = $col[0];
+		$work['FileLocation'] = $col[1];
+		$work['Author'] = $col[5];
+		$work['Length'] = $col[6];
+		$work['Words'] = $col[7];
+		$work['Target'] = $col[8];
+		$work['Chapter'] = $col[9];
+		$work['ThumbnailImage'] = str_replace("\\", "/", $col[10]);
 		$work['Description'] = $col[11];
-		$work['Length'] = $col[9];
 		$category = "";
-		for($x = 5; $x <= 8; $x++){
+		for($x = 2; $x <= 4; $x++){
 			if($col[$x] != ""){
-				if($x != 5) $category .= "/";
+				if($x != 2) $category .= "/";
 				$category .= $col[$x];
 			} else continue;
 		}

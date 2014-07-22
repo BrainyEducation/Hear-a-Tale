@@ -1,7 +1,7 @@
 <body class="">
 		<div id="page_wrapper">
 			<div id="page_header" class="gradient bottom-shadow" style="min-height:175px; height:175px;">
-				<a href="<?php $_SERVER['DOCUMENT_ROOT']. '/index.php' ?>"> <div class="bgback bg3" style="background-image:url('images/bookbanner.jpg');
+				<a href="<?php $_SERVER['DOCUMENT_ROOT']. '/index.php' ?>"> <div class="bgback bg3" id="banner" style="background-image:url('images/bookbanner.jpg');
 				background-position:50% 0; background-repeat:no-repeat no-repeat;"></div> </a>
 				<div class="shadowUP"></div>
 			</div>
