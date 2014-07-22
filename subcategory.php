@@ -32,6 +32,8 @@ if(sizeof($categoryExploded) === 3){
 	<head>
 
 		<?php
+		if(count($data) != 0) echo "<title>" . $categoryName . " - Hear a Tale</title>";
+		else echo "<title>Not found - Hear a Tale</title>";
 		include ($_SERVER['DOCUMENT_ROOT'] . '/globalHeader.php');
 		?>
 

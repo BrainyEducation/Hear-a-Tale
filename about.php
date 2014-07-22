@@ -13,6 +13,7 @@ require_once ('functions2.php');
 	<!--<![endif]-->
 	<head>
 
+		<title>About - Hear a Tale</title>
 		<?php
 		include ($_SERVER['DOCUMENT_ROOT'] . '/globalHeader.php');
 		?>
@@ -590,6 +591,10 @@ require_once ('functions2.php');
 						<td width="50%">General Editor and Project Director</td>
 					</tr>
 					<tr>
+						<td>Cal Stephens</td>
+						<td>Lead Developer and Webmaster</td>
+					</tr>
+					<tr>
 						<td>Chris Pope</td>
 						<td>Disc Technical Director</td>
 					</tr>
@@ -622,6 +627,10 @@ require_once ('functions2.php');
 						<td>Digital Art Jerrold (colored Jerrold B&W images)</td>
 					</tr>
 					<tr>
+						<td>Jacob Wall</td>
+						<td>Digital Art</td>
+					</tr>
+					<tr>
 						<td>Joey Hart</td>
 						<td>Digital Art</td>
 					</tr>
@@ -647,7 +656,7 @@ require_once ('functions2.php');
 					</tr>
 					<tr>
 						<td>Davin Miller</td>
-						<td>Senior Website Designer</td>
+						<td>Website Designer</td>
 					</tr>
 					<tr>
 						<td>Karington Turner</td>

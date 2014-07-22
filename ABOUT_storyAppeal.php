@@ -13,6 +13,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 	<!--<![endif]-->
 	<head>
 
+		<title>Story Appeal Markings - Hear a Tale</title>
 		<?php
 		include ($_SERVER['DOCUMENT_ROOT'] . '/globalHeader.php');
 		?>
@@ -39,7 +40,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 			<br><br>
 			<a href="video.php?url=27431/7616118.mp4"><img src="images/one-off/storyAppealExample.jpg"></a>
 			<br><br>
-			They signify the focus of the story and thus who the story is most likely to appeal to. Of course they are just guidelines because every child is different,
+			These markings signify whether the story is more likely to appeal to boys or girls. Of course they are just guidelines because every child is different,
 			but they are designed to allow teachers, parents, and even the children themselves to choose stories that they will like most.
 			<h3><img style="width:25px" src="images/target_audience/M.png"> Male Protagonist</h3>
 			Stories marked with a blue dot emphasize male protagonists. They may appeal more to boys.

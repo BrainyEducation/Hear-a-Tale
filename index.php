@@ -9,7 +9,7 @@ require_once ('functions2.php');
 <html lang="en-gb" class="no-js">
 	<!--<![endif]-->
 	<head>
-
+		<title>Home - Hear a Tale</title>
 		<?php
 		include ($_SERVER['DOCUMENT_ROOT'] . '/globalHeader.php');
 		?>
@@ -35,7 +35,7 @@ require_once ('functions2.php');
 			<br/>
 
 			<fieldset><legend>
-					<a href='adults.php'>Students and Adults</a>
+					<a href='adult/adultlist.php'>Students and Adults</a>
 			</legend></fieldset>
 			<div style='width:100%; overflow:hidden;'>
 			<?php	authorCarousel("Students and Adults"); ?>
@@ -43,7 +43,7 @@ require_once ('functions2.php');
 			<br/>
 
 			<fieldset><legend>
-					<a href='south.php'>Southern Literature</a>
+					<a href='adult/southernlist.php'>Southern Literature</a>
 			</legend></fieldset>
 			<div style='width:100%; overflow:hidden;'>
 			<?php	authorCarousel("Students and Adults/Southern Literature"); ?>

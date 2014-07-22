@@ -16,33 +16,28 @@ if($url != ""){
 		}
 	}
 
-	if (play != NULL && $sourceCategory == NULL) {
-		$array = explode(";", $play['Category']);
-		$category1 = explode("/", $array[0]);
-		$sourceCategory = $category1[0];
-	}
-}
+	$previousVideo = NULL;
+	$nextVideo = NULL;
 
-$previousVideo = NULL;
-$nextVideo = NULL;
+	if($sourceCategory != ""){
+		$categoryExploded = explode("/", $sourceCategory);
+		$categoryName = $categoryExploded[sizeof($categoryExploded) - 1];
+		$thumbnailCat = "section_icons/" . str_replace(" ", "_", str_replace("/", "!", $sourceCategory)) . ".png";
+		if(!file_exists($thumbnailCat)){
+			//get thumbnail for supercategory
+			$thumbnailCat = str_replace(str_replace(" ", "_", str_replace("/", "!", "!" . $categoryName)), "", $thumbnailCat);
+		}
 
-if($sourceCategory != ""){
-	$categoryExploded = explode("/", $sourceCategory);
-	$categoryName = $categoryExploded[sizeof($categoryExploded) - 1];
-	$thumbnailCat = "section_icons/" . str_replace(" ", "_", str_replace("/", "!", $sourceCategory)) . ".png";
-	if(!file_exists($thumbnailCat)){
-		//get thumbnail for supercategory
-		$thumbnailCat = str_replace(str_replace(" ", "_", str_replace("/", "!", "!" . $categoryName)), "", $thumbnailCat);
-	}
-
-	$fullCategory = getAllInCategory($sourceCategory);
-	for($x = 0; $x < count($fullCategory); $x++){
-		$work = $fullCategory[$x];
-		if($work['FileLocation'] == $url){
-			if($x != 0) $previousVideo = $fullCategory[$x - 1];
-			if($x != (count($fullCategory) - 1)) $nextVideo = $fullCategory[$x + 1];
+		$fullCategory = getAllInCategory($sourceCategory);
+		for($x = 0; $x < count($fullCategory); $x++){
+			$work = $fullCategory[$x];
+			if($work['FileLocation'] == $url){
+				if($x != 0) $previousVideo = $fullCategory[$x - 1];
+				if($x != (count($fullCategory) - 1)) $nextVideo = $fullCategory[$x + 1];
+			}
 		}
 	}
+
 }
 ?>
 
@@ -56,6 +51,8 @@ if($sourceCategory != ""){
 	<head>
 
 		<?php
+		if($play != null && $play['Title'] != "") echo "<title>" . $play['Title'] . " - Hear a Tale</title>";
+		else echo "<title>Not Found - Hear a Tale</title>";
 		include ($_SERVER['DOCUMENT_ROOT'] . '/globalHeader.php');
 		?>
 
@@ -100,9 +97,13 @@ if($sourceCategory != ""){
 
 					<?php
 					if($nextVideo != NULL){
+						if(strpos($sourceCategory, '/Stories') == FALSE){
 					?>
-					window.location.href = "video.php?url=<?php echo $nextVideo['FileLocation'];?>&cat=<?php echo $sourceCategory;?>";
+
+					window.location.href = "video.php?url=<?php echo $nextVideo['FileLocation'];?>&cat=<?php echo $sourceCategory;?>"
+
 					<?php
+						}
 					}
 					?>
 

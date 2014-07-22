@@ -12,7 +12,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . 'functions2.php');
 <html lang="en-gb" class="no-js">
 	<!--<![endif]-->
 	<head>
-
+		<title>Template - Hear a Tale</title>
 		<?php
 		include ($_SERVER['DOCUMENT_ROOT'] . '/globalHeader.php');
 		?>

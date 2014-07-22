@@ -10,6 +10,7 @@ require_once ('functions2.php');
 	<!--<![endif]-->
 	<head>
 
+		<title>Children's Section - Hear a Tale</title>
 		<?php
 		include ($_SERVER['DOCUMENT_ROOT'] . '/globalHeader.php');
 		?>

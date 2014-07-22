@@ -46,6 +46,7 @@ if(sizeof($subcats) == 0) header( 'Location: subcategory.php?cat=' . $category )
 	<head>
 
 		<?php
+		echo "<title>" . $categoryName . " - Hear a Tale</title>";
 		include ($_SERVER['DOCUMENT_ROOT'] . '/globalHeader.php');
 		?>
 

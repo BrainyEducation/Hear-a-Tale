@@ -1,5 +1,4 @@
-		<title>Hear a Tale</title>
-		<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+		<link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
 		<meta charset="utf-8" />
 		<?php
 			include ($_SERVER['DOCUMENT_ROOT'] . '/cssjs.php');
