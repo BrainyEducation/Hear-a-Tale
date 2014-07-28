@@ -4,18 +4,19 @@ require_once ('functions2.php');
 $category = $_GET['cat'];
 
 if($category == "Children") header( 'Location: children.php' ) ;
+if($category == "Children/Stories/Stories by Appeal") header('Location: subcategory_appeal.php');
 
 $data = getAllInCategory($category);
 
 $categoryExploded = explode("/", $category);
 $categoryName = $categoryExploded[sizeof($categoryExploded) - 1];
-$thumbnailCat = "section_icons/" . str_replace(" ", "_", str_replace("/", "!", $category)) . ".png";
+$thumbnailCat = "images/section_icons/" . str_replace(" ", "_", str_replace("/", "!", $category)) . ".png";
 
 $superCat = NULL;
 $thumbnailSuperCat;
 if(sizeof($categoryExploded) === 3){
 	$superCat = $categoryExploded[1];
-	$thumbnailSuperCat = "section_icons/Children!" . str_replace(" ", "_", str_replace("/", "!", $superCat)) . ".png";
+	$thumbnailSuperCat = "images/section_icons/Children!" . str_replace(" ", "_", str_replace("/", "!", $superCat)) . ".png";
 }
 
 
@@ -77,7 +78,7 @@ if(sizeof($categoryExploded) === 3){
 				echo '<img style="height: 135px; width: auto; padding-right: 5px;" src="Thumbnails/' . str_replace("\\", "/", $work['ThumbnailImage']) . '">';
 				echo "</div>";
 				echo "<div style='width:600px; height: 135px; display: table-cell; vertical-align: middle;'>";
-				echo "<h3 style='margin-bottom:0px; padding-top:0px; margin-top:-10px; float:left;'>" . $work['Title'] . "</h3></a>";
+				echo "<h3 style='margin-bottom:0px; padding-top:0px; margin-top:-10px; float:left;'>" . $work['Title'] . "</p></h3></a>";
 				if($work["Length"] != "" || $work["Target"] != ""){
 					echo "<div style='clear:both; padding-left: 5px; display: table-cell;'>";
 					if($work["Target"] != ""){
