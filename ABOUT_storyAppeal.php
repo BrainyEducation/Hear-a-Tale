@@ -29,27 +29,27 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 
 		<div class="span9" style="margin-left:5px; margin-right:5px;">
 			<div style="clear: both;"></div>
-			<h2>Story Appeal Markings
+			<?php //aboutHeader("Story Appeal Markings"); ?>
+			<h1>Story Appeal Markings
 			<img style="width:30px" src="images/target_audience/M.png">
 			<img style="width:30px" src="images/target_audience/F.png">
 			<img style="width:30px" src="images/target_audience/B.png">
 			<img style="width:30px" src="images/target_audience/A.png">
-			</h2>
+			</h1>
 			<br>
-			These markings appear next to titles of stories within the Children's Section.
-			<br><br>
-			<a href="video.php?url=27431/7616118.mp4"><img src="images/one-off/storyAppealExample.jpg"></a>
-			<br><br>
-			These markings signify whether the story is more likely to appeal to boys or girls. Of course they are just guidelines because every child is different,
-			but they are designed to allow teachers, parents, and even the children themselves to choose stories that they will like most.
-			<h3><img style="width:25px" src="images/target_audience/M.png"> Male Protagonist</h3>
+			These markings appear next to titles of stories within the Children's Section.<br><br>
+			They signify whether the story is more likely to appeal to boys or girls. Of course they are just guidelines because every child is different,
+			but they are designed to allow teachers, parents, and even the children themselves to choose stories that they will like most.<br><br>
+			<h3><img style="width:25px" src="images/target_audience/M.png"> Male Protagonist</p></h3>
 			Stories marked with a blue dot emphasize male protagonists. They may appeal more to boys.
-			<h3><img style="width:25px" src="images/target_audience/F.png"> Female Protagonist</h3>
+			<h3><img style="width:25px" src="images/target_audience/F.png"> Female Protagonist</p></h3>
 			Stories marked with a pink dot emphasize female protagonists. They may appeal more to girls.
-			<h3><img style="width:25px" src="images/target_audience/B.png"> General Appeal</h3>
+			<h3><img style="width:25px" src="images/target_audience/B.png"> General Appeal</p></h3>
 			Stroies marked with a green dot do not emphasize either gender. They may appeal equally to both boys and girls.
-			<h3><img style="width:25px" src="images/target_audience/A.png"> Animals and other non-human Protagonists</h3>
+			<h3><img style="width:25px" src="images/target_audience/A.png"> Animals and other non-human Protagonists</p></h3>
 			Stories marked with a gray dot feature animals and other non-human protagonists. They will likely appeal equally to both boys and girls.
+
+			<h1>
 
 		<?php
 		include ($_SERVER['DOCUMENT_ROOT'] . '/globalFooter.php');
