@@ -1,8 +1,5 @@
-<link rel="stylesheet" href="gru_style/bootstrap.css" type="text/css" />
-	<link rel="stylesheet" href="gru_style/superfish.css" type="text/css" />
+	<link rel="stylesheet" href="gru_style/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="gru_style/template.css" type="text/css" />
-	<link rel="stylesheet" href="gru_style/custom.css" type="text/css" />
-	<link rel="stylesheet" href="gru_style/responsive.css" type="text/css" />
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900&amp;v1&mp;subset=latin,latin-ext" type="text/css" media="screen" id="google_font" />
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700&amp;v1&mp;subset=latin,latin-ext" type="text/css" media="screen" id="google_font_body" />
 

@@ -1411,6 +1411,7 @@ h3.m_title {font-size:20px; line-height: 1.4;}
 .row-fluid.no-space .span11 {width: 91.666% !important;}
 .row-fluid.no-space .span12 {width: 100% !important;}
 @media (max-width: 767px) {
+
 	.row-fluid.no-space [class*="span"] {width: auto !important;}
 }
 .pricing_table { text-align: center; margin: 25px 0;}

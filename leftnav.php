@@ -1,41 +1,25 @@
- <link rel="stylesheet" type="text/css" href="jquery.css">
-
- <script id="about">
-
- $('#about_menu').on("click", function () {
-                $('#dropdown').slideToggle(500);
-            });
-    });
-
-</script>
-
-<div id="sidebar" class="sidebar-left">
-
-
-    <ul class="menu">
-        <li><a href='index.php'>Home</a></li>
-        <li><a href='children.php'>Children's Section <img style="width:50px" src = "section_icons/Children.png" id="children_sidebar"></a></li>
-        <li><a href='adult/adultlist.php'>Students and Adults</a></li>
-        <li><a href='adult/southernlist.php'>Southern Literature</a></li>
-        <li><a href="about.php" id="about_menu" href='#'>About</a>
-        	<!--<ul id="dropdown">
-        		<li><a href="about.php#introduction">Introduction</a></li>
-                        <li><a href="about.php#summaries">Story Plot Summaries</a></li>
-                        <li><a href="about.php#parents">To Parents and Caregivers</a></li>
-                        <li><a href="about.php#teachers">To Teachers</a></li>
-                        <li><a href="about.php#why">Why Classic Rhymes and Stories Matter</a></li>
-                        <li><a href="about.php#history">History of the Project</a></li>
-                        <li><a href="about.php#acknowledgements">Acknowledgements</a></li>
-            </ul>-->
-
-       	</li>
-
-
-
-    </ul>
-
-    <!-- end footer menu -->
-
+<div class="mainNav">
+    <div id="sidebar" class="sidebar-left">
+        <ul class="menu">
+            <li><a href='index.php'>Home</a></li>
+            <li><a href='children.php'>Children's Section <img style="width:50px" src = "images/section_icons/Children.png" id="children_sidebar"></a></li>
+            <li><a href='adult/adultlist.php'>Students and Adults</a></li>
+            <li><a href='adult/southernlist.php'>Southern Literature</a></li>
+            <li><a href="ABOUT_intro.php" id="about_menu" href='#'>About</a></li>
+        </ul>
+    </div>
+    <img src="images/einstein-small.png" style="width:75%; margin-left:5%; max-width:220px;"></a>
 </div>
-<br><br>
-<img src="images/einstein-small.png" style="width:75%">
+
+<div class="mobileNav">
+    <a href='index.php'><h3 class="one"><p>Home</p></h3></a>
+    <a href='children.php'><h3 class="two"><p><img style="width:40px" src="images/section_icons/Children.png">
+        Children's Section<img style="width:40px" src="images/section_icons/Children.png"></p></h3></a>
+    <?php if(basename($_SERVER['PHP_SELF']) == "index.php"){ ?>
+    <a href='adult/adultlist.php'><h3 class="three"><p>Students and Adults</p></h3></a>
+    <a href='adult/southernlist.php'><h3 class="four"><p>Southern Literature</p></h3></a>
+    <?php } ?>
+    <a href="ABOUT_intro.php" id="about_menu" href='#'><h3 class="five"><p>About</p></h3></a>
+    <br>
+    <br>
+</div>
