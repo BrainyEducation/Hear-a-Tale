@@ -47,7 +47,7 @@ require_once ('functions2.php');
 
 			<div style="clear: both;"></div>
 
-					<h1><strong><i><img src="section_icons/Children.png">Children's Section</i></strong></h1>
+					<h1><strong><i><img src="images/section_icons/Children.png">Children's Section</i></strong></h1>
 					</br>
 
 			<?php
@@ -79,14 +79,14 @@ require_once ('functions2.php');
 			}
 
 			foreach($subcatSupergroups as $subcatSuper){
-				$thumbnailSuper = "section_icons/Children!" . str_replace(" ", "_", str_replace("/", "!", $subcatSuper)) . ".png";
+				$thumbnailSuper = "images/section_icons/Children!" . str_replace(" ", "_", str_replace("/", "!", $subcatSuper)) . ".png";
 				echo "<a href='category.php?cat=Children/" . $subcatSuper . "'>";
 				echo "<div style='padding-left:105px;'>";
 				echo "<fieldset><legend><h2><strong>";
 				if(file_exists($thumbnailSuper)) echo "<img padding-right:5px;' src= " . $thumbnailSuper . ">";
 				echo $subcatSuper . "</strong></h2></legend></fieldset></div></a>";
 				/*foreach($subcatGroups[$subcatSuper] as $subcat){
-					$thumbnail = "section_icons/Children!" . str_replace(" ", "_", str_replace("/", "!", $subcatSuper . "!" . $subcat)) . ".png";
+					$thumbnail = "images/section_icons/Children!" . str_replace(" ", "_", str_replace("/", "!", $subcatSuper . "!" . $subcat)) . ".png";
 					echo "<fieldset><legend><div style='padding-left:105px'><a href='/category.php?cat=Children/" . $subcatSuper . "/" . $subcat . "'>";
 					if(file_exists($thumbnail)) echo "<img style='padding-right:5px' src= ". $thumbnail . ">";
 					echo $subcat . "</div></a></legend></fieldset>";

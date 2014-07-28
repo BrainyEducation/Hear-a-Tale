@@ -120,7 +120,7 @@
 
     <ul class="menu">
         <li><a href='index.php'>Home</a></li>
-        <li><a href='children.php'>Children's Section <img style="width:50px" src = "section_icons/Children.png" id="children_sidebar"></a></li>
+        <li><a href='children.php'>Children's Section <img style="width:50px" src = "images/images/section_icons/Children.png" id="children_sidebar"></a></li>
         <li><a href='adults.php'>Students and Adults</a></li>
         <li><a href='southern.php'>Southern Literature</a></li>
         <li><a href="about.php" id="about_menu" href='#'>About</a>
@@ -149,13 +149,13 @@
 		<div class="span9" style="margin-left:5px; margin-right:5px;">
 			<div style="clear: both;"></div>
 
-			<div style='text-align:center;'> <br><h3>The page you were looking for could not be found...<br><br>:(<br><br>Please go back and try again!</h3> </div><br><br><br>
+			<div style='text-align:center;'> <br><h3>The page you were looking for could not be found...<br><br>:(<br><br>Please go back and try again!</p></h3> </div><br><br><br>
 			<table style="width:100%;">
 				<tr align="center">
-					<td><a href='children.php'><img src='section_icons/Children.png'></a></td>
-					<td><a href='category.php?cat=Children/Rhymes'><img src='section_icons/Children!Rhymes.png'></a></td>
-					<td><a href='category.php?cat=Children/Stories'><img src='section_icons/Children!Stories.png'></a></td>
-					<td><a href='category.php?cat=Children/Rhymes and Stories'><img src='section_icons/Children!Rhymes_and_Stories.png'></a></td>
+					<td><a href='children.php'><img src='images/images/section_icons/Children.png'></a></td>
+					<td><a href='category.php?cat=Children/Rhymes'><img src='images/images/section_icons/Children!Rhymes.png'></a></td>
+					<td><a href='category.php?cat=Children/Stories'><img src='images/images/section_icons/Children!Stories.png'></a></td>
+					<td><a href='category.php?cat=Children/Rhymes and Stories'><img src='images/images/section_icons/Children!Rhymes_and_Stories.png'></a></td>
 				<tr>
 				<tr align="center" valign="top">
 					<td>Children's Section</td>

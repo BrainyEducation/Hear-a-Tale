@@ -149,13 +149,13 @@ function error404($what){
 	$emotes = array(":(",":o",":O","D:",":c",":$","ಠ_ಠ", "(>_<)", "(?_?)", "(-_-)", "(~_~)", "(╯°□°）╯︵ ┻━┻", ":(", "ლ(ಠ益ಠლ)﻿");
 	$error = "<div style='text-align:center;'> <br><h3>The <i>" . $what . "</i> you were looking for could not be found...<br><br>";
 	$error .= $emotes[rand(0, count($emotes)) - 1];
-	$error .= "<br><br>Please go back and try again!</h3> </div><br><br><br>";
+	$error .= "<br><br>Please go back and try again!</p></h3> </div><br><br><br>";
 	$error .= "<table style='width:100%;'>
 		<tr align='center'>
-			<td><a href='children.php'><img src='section_icons/Children.png'></a></td>
-			<td><a href='category.php?cat=Children/Rhymes'><img src='section_icons/Children!Rhymes.png'></a></td>
-			<td><a href='category.php?cat=Children/Stories'><img src='section_icons/Children!Stories.png'></a></td>
-			<td><a href='category.php?cat=Children/Rhymes and Stories'><img src='section_icons/Children!Rhymes_and_Stories.png'></a></td>
+			<td><a href='children.php'><img src='images/section_icons/Children.png'></a></td>
+			<td><a href='category.php?cat=Children/Rhymes'><img src='images/section_icons/Children!Rhymes.png'></a></td>
+			<td><a href='category.php?cat=Children/Stories'><img src='images/section_icons/Children!Stories.png'></a></td>
+			<td><a href='category.php?cat=Children/Rhymes and Stories'><img src='images/section_icons/Children!Rhymes_and_Stories.png'></a></td>
 		<tr>
 		<tr align='center' valign='top'>
 			<td>Children's Section</td>
@@ -165,6 +165,23 @@ function error404($what){
 		</tr>
 	</table>";
 	echo $error;
+}
+
+function aboutHeader($currentPage){
+	echo "<table class='header' style='width:100%;'>";
+		echo "<tr align='center' valign='top'>";
+			echo ($currentPage == "Introduction" ? "<td class='selected'>" : "<td>");
+				echo "<a href=ABOUT_intro.php><img src='images/section_icons/Children.png'><br><b>Introduction</b></a></td>";
+			echo ($currentPage == "To Parents" ? "<td class='selected'>" : "<td>");
+				echo "<a href=ABOUT_parents.php><img src='images/about/parents.png'><br><b>To Parents</b></a></td>";
+			echo ($currentPage == "To Teachers" ? "<td class='selected'>" : "<td>");
+				echo "<a href=ABOUT_teachers.php><img src='images/about/teachers.png'><br><b>To Teachers</b></a></td>";
+			echo ($currentPage == "Why Classic Stories Matter" ? "<td class='selected'>" : "<td>");
+				echo "<a href=ABOUT_why.php><img src='images/about/why.png'><br><b>Why Classic Stories Matter</b></a></td>";
+			echo ($currentPage == "History of the Project" ? "<td class='selected'>" : "<td>");
+				echo "<a href=ABOUT_history.php><img src='images/about/history.png'><br><b>History of the Project</b></a></td>";
+		echo "</tr>";
+	echo "</table><br>";
 }
 
 ?>

@@ -27,7 +27,7 @@ require_once ('functions2.php');
 			<div style="clear: both;"></div>
 
 			<fieldset><legend>
-					<a href='children.php'><img style='height:50px' src='section_icons/Children.png'>Children's Section</a>
+					<a href='children.php'><img style='height:50px' src='images/section_icons/Children.png'>Children's Section</a>
 			</legend></fieldset>
 			<div style='width:100%; overflow:hidden; margin-left:0 auto; margin-right: 0 auto;'>
 			<?php	twoRowTitleCarousel("Children"); ?>

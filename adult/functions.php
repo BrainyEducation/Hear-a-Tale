@@ -235,7 +235,7 @@ function listWorks($author) {
                     echo '<p>' . $audio[11] . '</p>' . PHP_EOL;
                 }
                 echo '<div style="clear: both;"></div>' . PHP_EOL;
-                echo '<h3>Works</h3><hr />' . PHP_EOL;
+                echo '<h3>Works</p></h3><hr />' . PHP_EOL;
                 $bioDisplayed = true;
             }
             if (strtolower($audio[8]) == "fiction: books") {

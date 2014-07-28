@@ -516,7 +516,7 @@ if (!isset($_SESSION['matrix'])) {
                                         </tr>
                                     </table>
                                     <a id="parents"></a>
-                                    <h3>To Parents and Caregivers</h3>
+                                    <h3>To Parents and Caregivers</p></h3>
 
                                     <h4>Interact with your Child</h4>
                                     <p>We hope you’ll find ways to actively encourage the children in your life to enjoy these online offerings—perhaps by turning down the volume and reading aloud the onscreen text of the stories or rhymes, perhaps by discussing with the children what they hear and understand, maybe by asking questions about rhyming sounds or why characters do certain things or why the picture shows what it does, or by asking if they can identify certain letters or words on the screen, or by asking them to close their eyes when listening to a story—for most children the pictures in their imaginations will be far richer than any onscreen visual.</p>
@@ -540,7 +540,7 @@ if (!isset($_SESSION['matrix'])) {
 
 
                                     <a id="teachers"></a>
-                                    <h3>To Teachers</h3>
+                                    <h3>To Teachers</p></h3>
 
                                     <p>You have too much to do, too little time and very little, if any, of that is free or discretionary time.  This site can extend the school day for you, can help your students do valuable work outside of class if you can find ways to encourage the children to regularly watch and listen, and if you can encourage parents sit beside them to talk and ask questions and to praise the children for reciting rhymes and retelling stories.</p>
 
@@ -577,7 +577,7 @@ if (!isset($_SESSION['matrix'])) {
                                     <p>(Teachers interested in earning two PLUs (professional learning units) through an online 20-hour course on using rhymes and stories to promote literacy and pre-literacy should email us at <a href="mailto:rhymeazoo@gru.edu">rhymeazoo@gru.edu</a>)</p>
 
                                     <a id="why"></a>
-                                    <h3>Why Classic Rhymes and Stories Matter</h3>
+                                    <h3>Why Classic Rhymes and Stories Matter</p></h3>
 
                                     <p>A rare child might find joy in almost every rhyme and story and picture on the site; some may dislike them all.  Given the opportunity, many children will discover they like some rhymes, a few tales, but may find the rest boring, and after dallying with the site a while, will reject these book-like presentations for a movie or tv show or video game that renders them passive by stimulating their senses far more than their minds.  God bless them.</p>
 
@@ -605,7 +605,7 @@ if (!isset($_SESSION['matrix'])) {
 
 
                                     <a id="history"></a>
-                                    <h3>History of the Project</h3>
+                                    <h3>History of the Project</p></h3>
 
                                     <p>Educational research constantly reminds us that regularly hearing stories and rhymes is crucial for preparing young children to succeed in school and later in life.  Television, even children’s educational  programs, can’t fill the void.  To enable children to hear stories even when there is no adult to read to them, I had a dream of creating audio CDs of fairy tales and nursery rhymes to distribute free.   In 2006 we began recording fairy tales in the office of Edgar LaMotte, then the Manager of Augusta State University’s Media Center.   We had no studio, but Edgar’s talent and resourcefulness as audio engineer gave us an excellent start on an ambitious project.  I had no budget, however, and no realistic prospects for acquiring one.</p>
 
@@ -627,7 +627,7 @@ if (!isset($_SESSION['matrix'])) {
 
 
                                     <a id="acknowledgements"></a>
-                                    <h3>Acknowledgements</h3>
+                                    <h3>Acknowledgements</p></h3>
 
                                     <h4>Production</h4>
                                     <table width="700px">

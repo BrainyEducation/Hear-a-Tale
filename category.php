@@ -12,7 +12,7 @@ if(sizeof($data) == 0){
 
 $categoryExploded = explode("/", $category);
 $categoryName = $categoryExploded[sizeof($categoryExploded) - 1];
-$thumbnailCat = "section_icons/" . str_replace(" ", "_", str_replace("/", "!", $category)) . ".png";
+$thumbnailCat = "images/section_icons/" . str_replace(" ", "_", str_replace("/", "!", $category)) . ".png";
 
 $allSubcats = array();
 
@@ -69,7 +69,7 @@ if(sizeof($subcats) == 0) header( 'Location: subcategory.php?cat=' . $category )
 					<h1><strong><i>
 						<?php
 							echo "<a href='children.php'>";
-							echo "<img style='padding-right:5px' src=section_icons/Children.png>";
+							echo "<img style='padding-right:5px' src=images/section_icons/Children.png>";
 							echo "Children's Section: </a>";
 
 							echo $categoryName;
@@ -80,7 +80,7 @@ if(sizeof($subcats) == 0) header( 'Location: subcategory.php?cat=' . $category )
 			<?php
 
 			foreach($subcats as $subcat){
-				$thumbnail = "section_icons/" . str_replace(" ", "_", str_replace("/", "!", $category . "/" . $subcat)) . ".png";
+				$thumbnail = "images/section_icons/" . str_replace(" ", "_", str_replace("/", "!", $category . "/" . $subcat)) . ".png";
 				echo "<a href='subcategory.php?cat=" . $category . "/" . $subcat . "'>";
 				echo "<div style='padding-left:105px;'>";
 				echo "<fieldset><legend><h2><strong>";

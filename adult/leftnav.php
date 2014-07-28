@@ -3,7 +3,7 @@
 
     <ul class="menu">
         <li><a href='index.php'>Audiobooks Home</a</li>
-        <li><a href='/children.php'>Children's Section <img style="width:50px" src = "/section_icons/Children.png" id="children_sidebar"></a></li>
+        <li><a href='/children.php'>Children's Section <img style="width:50px" src = "/images/section_icons/Children.png" id="children_sidebar"></a></li>
         <li><a href='adultlist.php'>Students and Adults</a></li>
         <li><a href='southernlist.php'>Southern Literature</a></li>
     </ul>

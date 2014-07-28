@@ -22,7 +22,7 @@ if($url != ""){
 	if($sourceCategory != ""){
 		$categoryExploded = explode("/", $sourceCategory);
 		$categoryName = $categoryExploded[sizeof($categoryExploded) - 1];
-		$thumbnailCat = "section_icons/" . str_replace(" ", "_", str_replace("/", "!", $sourceCategory)) . ".png";
+		$thumbnailCat = "images/section_icons/" . str_replace(" ", "_", str_replace("/", "!", $sourceCategory)) . ".png";
 		if(!file_exists($thumbnailCat)){
 			//get thumbnail for supercategory
 			$thumbnailCat = str_replace(str_replace(" ", "_", str_replace("/", "!", "!" . $categoryName)), "", $thumbnailCat);
@@ -174,19 +174,19 @@ if($url != ""){
 				<?php
 					if($previousVideo != NULL){
 						echo "<a title='" . $previousVideo['Title'] . "' href='video.php?url=" . $previousVideo['FileLocation'] . "&cat=" . $sourceCategory . "'>
-						<img src='section_icons/arrow_left.png'></a>";
+						<img src='images/section_icons/arrow_left.png'></a>";
 					}
 				?>
 				</td>
-				<td><a href='children.php'><img src='section_icons/Children.png'></a></td>
-				<td><a href='category.php?cat=Children/Rhymes'><img src='section_icons/Children!Rhymes.png'></a></td>
-				<td><a href='category.php?cat=Children/Stories'><img src='section_icons/Children!Stories.png'></a></td>
-				<td><a href='category.php?cat=Children/Rhymes and Stories'><img src='section_icons/Children!Rhymes_and_Stories.png'></a></td>
+				<td><a href='children.php'><img src='images/section_icons/Children.png'></a></td>
+				<td><a href='category.php?cat=Children/Rhymes'><img src='images/section_icons/Children!Rhymes.png'></a></td>
+				<td><a href='category.php?cat=Children/Stories'><img src='images/section_icons/Children!Stories.png'></a></td>
+				<td><a href='category.php?cat=Children/Rhymes and Stories'><img src='images/section_icons/Children!Rhymes_and_Stories.png'></a></td>
 				<td>
 				<?php
 					if($nextVideo != NULL){
 						echo "<a title='" . $nextVideo['Title'] . "' href='video.php?url=" . $nextVideo['FileLocation'] . "&cat=" . $sourceCategory . "'>
-						<img src='section_icons/arrow_right.png'></a>";
+						<img src='images/section_icons/arrow_right.png'></a>";
 					}
 				?>
 				</td>
