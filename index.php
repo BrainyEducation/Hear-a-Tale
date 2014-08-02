@@ -25,6 +25,25 @@ require_once ('functions2.php');
 		<div class="span9" style="margin-left:5px; margin-right:5px;">
 
 			<div style="clear: both;"></div>
+			<?php
+				if(preg_match('/(?i)msie [4-9]/',$_SERVER['HTTP_USER_AGENT'])) {
+			?>
+
+			<div class="IE-warning">
+			<b>
+				We've had reports of users experiencing issues using Hear a Tale with <i>Internet Explorer</i>.<br>
+				Please consider using a more reliable web browser:<br>
+				<a href="https://www.google.com/chrome/browser/">
+					<img src="http://icons.iconarchive.com/icons/google/chrome/128/Google-Chrome-icon.png">
+				</a>
+				<a href="https://www.mozilla.org/en-US/firefox/new/">
+					<img src="http://img2.wikia.nocookie.net/__cb20090607180304/gta/pl/images/4/49/Firefox_(logo).png">
+				</a>
+
+			</b>
+			</div>
+
+			<?php } ?>
 
 			<fieldset><legend>
 					<a href='children.php'><img style='height:50px' src='images/section_icons/Children.png'>Children's Section</a>

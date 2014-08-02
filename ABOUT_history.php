@@ -29,9 +29,9 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 
 		<div class="span9" style="margin-left:5px; margin-right:5px;">
 			<div style="clear: both;"></div>
-			
+
 			<?php aboutHeader("History of the Project"); ?>
-			<h3>History of the Project</p></h3>
+			<h1>History of the Project</p></h1>
 
 			<p>Educational research constantly reminds us that regularly hearing stories and rhymes is crucial for preparing young children to succeed in school and later in life.  Television, even children’s educational  programs, can’t fill the void.  To enable children to hear stories even when there is no adult to read to them, I had a dream of creating audio CDs of fairy tales and nursery rhymes to distribute free.   In 2006 we began recording fairy tales in the office of Edgar LaMotte, then the Manager of Augusta State University’s Media Center.   We had no studio, but Edgar’s talent and resourcefulness as audio engineer gave us an excellent start on an ambitious project.  I had no budget, however, and no realistic prospects for acquiring one.</p>
 
@@ -53,7 +53,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 
 
 			<a id="acknowledgements"></a>
-			<h3>Acknowledgements</p></h3>
+			<h1>Acknowledgements</p></h1>
 
 			<h4>Production</h4>
 			<table width="700px">
