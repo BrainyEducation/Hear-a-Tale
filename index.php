@@ -26,12 +26,12 @@ require_once ('functions2.php');
 
 			<div style="clear: both;"></div>
 			<?php
-				if(preg_match('/(?i)msie [4-9]/',$_SERVER['HTTP_USER_AGENT'])) {
+				if(preg_match('/(?i)msie [1]/',$_SERVER['HTTP_USER_AGENT'])) {
 			?>
 
-			<div class="IE-warning">
+			<div style="margin-top:20px; margin-left:0; width:80%;" class="IE-warning">
 			<b>
-				We've had reports of users experiencing issues using Hear a Tale with <i>Internet Explorer</i>.<br>
+				The version of Internet Explorer you are using may not support Hear a Tale's video player.<br>
 				Please consider using a more reliable web browser:<br>
 				<a href="https://www.google.com/chrome/browser/">
 					<img src="http://icons.iconarchive.com/icons/google/chrome/128/Google-Chrome-icon.png">

@@ -125,6 +125,27 @@ if($url != ""){
 
 <div class="span9" style="margin-left:5px; margin-right:5px;">
 	<div style="clear: both;"></div>
+
+	<?php
+		if(preg_match('/(?i)msie [1]/',$_SERVER['HTTP_USER_AGENT'])) {
+	?>
+
+	<div style="margin-top:20px; margin-left:0; width:80%;" class="IE-warning">
+	<b>
+		The version of Internet Explorer you are using may not support Hear a Tale's video player.<br>
+		Please consider using a more reliable web browser:<br>
+		<a href="https://www.google.com/chrome/browser/">
+			<img src="http://icons.iconarchive.com/icons/google/chrome/128/Google-Chrome-icon.png">
+		</a>
+		<a href="https://www.mozilla.org/en-US/firefox/new/">
+			<img src="http://img2.wikia.nocookie.net/__cb20090607180304/gta/pl/images/4/49/Firefox_(logo).png">
+		</a>
+
+	</b>
+	</div>
+
+	<?php } ?>
+
 	<?php	if($play != null){  ?>
 
 		<fieldset>
@@ -209,26 +230,6 @@ if($url != ""){
 				</td>
 			</tr>
 		</table>
-
-	<?php
-		if(preg_match('/(?i)msie [4-9]/',$_SERVER['HTTP_USER_AGENT'])) {
-	?>
-
-	<div style="margin-top:20px; margin-left:0; width:80%;" class="IE-warning">
-	<b>
-		If you are using <i>Internet Explorer</i> and experiencing issues loading or watching videos,<br>
-		please consider using a more reliable web browser:<br>
-		<a href="https://www.google.com/chrome/browser/">
-			<img src="http://icons.iconarchive.com/icons/google/chrome/128/Google-Chrome-icon.png">
-		</a>
-		<a href="https://www.mozilla.org/en-US/firefox/new/">
-			<img src="http://img2.wikia.nocookie.net/__cb20090607180304/gta/pl/images/4/49/Firefox_(logo).png">
-		</a>
-
-	</b>
-	</div>
-
-	<?php } ?>
 
 
 
