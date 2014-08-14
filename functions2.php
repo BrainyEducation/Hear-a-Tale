@@ -180,6 +180,8 @@ function aboutHeader($currentPage){
 				echo "<a href=ABOUT_why.php><img src='images/about/why.png'><br><b>Why Classic Stories Matter</b></a></td>";
 			echo ($currentPage == "History of the Project" ? "<td class='selected'>" : "<td>");
 				echo "<a href=ABOUT_history.php><img src='images/about/history.png'><br><b>History of the Project</b></a></td>";
+			echo ($currentPage == "More Information" ? "<td class='selected'>" : "<td>");
+				echo "<a href=ABOUT_more.php><img src='images/about/more.png'><br><b>More Information</b></a></td>";
 		echo "</tr>";
 	echo "</table><br>";
 }
