@@ -88,7 +88,7 @@ if(sizeof($categoryExploded) === 3){
 					if($work["Length"] != "") echo " <b>[</b>" . $work['Length'] . "<b>]</b> ";
 					echo "</div>";
 				}
-				echo "<div style='clear:both; padding-left: 15px; text-align:justify; width:450px;'>";
+				echo "<div style='clear:both; padding-left: 15px; text-align:justify; width:90%; max-width:450px;'>";
 				echo $work['Description'];
 				if($work["Words"] != "") echo " " . $work["Words"] . " words.";
 				echo "</div></div></div>";

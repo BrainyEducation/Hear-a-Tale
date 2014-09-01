@@ -56,6 +56,20 @@ function ensureDataLoaded() {
 	}
 }
 
+function getAllByAuthor($author){
+	ensureDataLoaded();
+	global $data;
+	$matches = array();
+	$titles = array();
+	foreach ($data as $work){
+		if($work['Author'] == $author && !in_array($work['Title'], $titles)){
+			array_push($matches, $work);
+			array_push($titles, $work['Title']);
+		}
+	}
+	return $matches;
+}
+
 function getAllInCategory($query) {
 	ensureDataLoaded();
 	global $data;

@@ -13,7 +13,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 	<!--<![endif]-->
 	<head>
 
-		<title>Introduction - Hear a Tale</title>
+		<title>More Information - Hear a Tale</title>
 		<?php
 		include ($_SERVER['DOCUMENT_ROOT'] . '/globalHeader.php');
 		?>

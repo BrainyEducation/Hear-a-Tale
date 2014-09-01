@@ -134,3 +134,29 @@ p.source{
 	width: 50px;
 	padding: 10px;
 }
+
+.authorCard{
+	padding: 10px;
+	height: 135px;
+}
+
+.authorCard img{
+	padding-right: 5px;
+	float: left;
+	height: 100%;
+}
+
+.authorCard .authorInfo{
+	display:table-cell;
+    vertical-align:middle;
+	height: 135px;
+}
+
+.authorCard .authorName{
+	margin-top: 0px;
+}
+
+.authorCard .authorWork{
+	margin-bottom: 2px;
+	padding-left: 10px;
+}

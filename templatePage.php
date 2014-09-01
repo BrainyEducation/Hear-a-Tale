@@ -1,5 +1,5 @@
 <?php
-require_once ($_SERVER['DOCUMENT_ROOT'] . 'functions2.php');
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 
 
 ?>
