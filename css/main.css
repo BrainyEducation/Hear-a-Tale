@@ -160,3 +160,19 @@ p.source{
 	margin-bottom: 2px;
 	padding-left: 10px;
 }
+
+.letterPicker{
+	color:#000000
+}
+
+.letterPicker a:link{
+	color:#666666
+}
+
+.letterPicker a:visited{
+	color:#666666
+}
+
+.letterPicker a:hover{
+	color:#444444
+}

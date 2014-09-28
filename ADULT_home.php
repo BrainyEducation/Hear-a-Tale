@@ -1,6 +1,7 @@
 <?php
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 
+$currentLetter = $_GET['letter'];
 
 ?>
 
@@ -38,9 +39,25 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 			</div>
 			</br>
 
-			<fieldset><legend>
-					All Authors
-			</legend></fieldset>
+			<fieldset>
+				<legend>
+					<div style="display:inline-block;"> All Authors </div>
+					<h6 style="display:inline-block;"><div class="letterPicker">
+						<?php
+							$letters = array("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z");
+							foreach($letters as $letter){
+								if($currentLetter == $letter){
+									echo $letter;
+								} else{
+									echo "<a href='ADULT_home.php?letter=" . $letter . "'>" . $letter . "</a>";
+								}
+								if($letter != "Z") echo " · ";
+							}
+						?>
+					</div></h6>
+				</legend>
+
+			</fieldset>
 
 			<?php
 			$catData = getAllInCategory("Students and Adults");
@@ -49,11 +66,16 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 			foreach($catData as $work){
 				if($work['Author'] == "" || is_null($work['Author'])) continue;
 				if(!in_array($work['Author'], $authors)){
-					array_push($workData, $work);
-					array_push($authors, $work['Author']);
+					if($currentLetter == "" || strpos($work['Author'], $currentLetter) === 0){
+						array_push($workData, $work);
+						array_push($authors, $work['Author']);
+					}
+
 				}
 			}
-
+			if(count($workData) === 0){
+				echo "There are no authors under <i>" . $currentLetter . "</i>.";
+			}
 			foreach($workData as $authorWork){
 
 				?>
