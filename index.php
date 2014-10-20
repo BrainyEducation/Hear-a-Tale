@@ -61,6 +61,7 @@ require_once ('functions2.php');
 			</div>
 			<br/>
 
+			<!--
 			<fieldset><legend>
 					<a href='adult/southernlist.php'>Southern Literature</a>
 			</legend></fieldset>
@@ -68,6 +69,7 @@ require_once ('functions2.php');
 			<?php	authorCarousel("Students and Adults/Southern Literature"); ?>
 			</div>
 			<br/>
+			---->
 
 		</div>
 

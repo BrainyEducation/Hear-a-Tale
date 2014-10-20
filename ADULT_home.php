@@ -81,18 +81,28 @@ $currentLetter = $_GET['letter'];
 				?>
 
 				<div class="authorCard">
-					<img src="Thumbnails/<?php echo $authorWork['ThumbnailImage']; ?>">
+					<a href="ADULT_author.php?author=<?php echo $authorWork['Author']; ?>">
+						<img src="Thumbnails/<?php echo $authorWork['ThumbnailImage']; ?>">
+					</a>
 					<div class="authorInfo">
-					<h4 class="authorName"><?php echo $authorWork['Author'] ?></h4>
+					<h4 class="authorName">
+						<a href="ADULT_author.php?author=<?php echo $authorWork['Author']; ?>">
+							<?php echo $authorWork['Author'] ?>
+						</a>
+					</h4>
 					<?php
 						$works = getAllByAuthor($authorWork['Author']);
 						shuffle($works);
 						for($i = 0; $i <= min(2, count($works)); $i++){
 							$work = $works[$i];
-							echo "<p class='authorWork'><i>" . $work['Title'] . "</i></p>";
+							echo "<p class='authorWork'><a href='ADULT_viewer.php?url=" . $work['FileLocation'] . "'><i>" . $work['Title'] . "</i></a></p>";
 						}
 					?>
-					<p style='margin-top:10px; padding-left: 5px;'><b>See all</b></p>
+					<p style='margin-top:10px; padding-left: 5px;'>
+						<a href="ADULT_author.php?author=<?php echo $authorWork['Author']; ?>">
+							<b>See all</b>
+						</a>
+					</p>
 
 				</div>
 				</div>
