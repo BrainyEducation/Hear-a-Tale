@@ -70,6 +70,18 @@ function getAllByAuthor($author){
 	return $matches;
 }
 
+function getAllByAuthorOutOfPool($author, $pool){
+	$matches = array();
+	$titles = array();
+	foreach ($pool as $work){
+		if($work['Author'] == $author && !in_array($work['Title'], $titles)){
+			array_push($matches, $work);
+			array_push($titles, $work['Title']);
+		}
+	}
+	return $matches;
+}
+
 function getAllInCategory($query) {
 	ensureDataLoaded();
 	global $data;
@@ -196,6 +208,42 @@ function aboutHeader($currentPage){
 				echo "<a href=ABOUT_history.php><img src='images/about/history.png'><br><b>History of the Project</b></a></td>";
 			echo ($currentPage == "More Information" ? "<td class='selected'>" : "<td>");
 				echo "<a href=ABOUT_more.php><img src='images/about/more.png'><br><b>More Information</b></a></td>";
+		echo "</tr>";
+	echo "</table><br>";
+}
+
+function adultOriginHeader($currentPage, $currentType){
+	if($currentType != "") $currentType = ("&type=" . $currentType);
+	echo "<table class='header' style='width:100%;'>";
+		echo "<tr align='center' valign='top'>";
+			echo ($currentPage == "All Origins" ? "<td class='selected'>" : "<td>");
+				echo "<a href='ADULT_home.php?origin=All Origins" . $currentType . "'><img src='images/adult/all_origins.png'><br><b>All Origins</b></a></td>";
+			echo ($currentPage == "American Literature" ? "<td class='selected'>" : "<td>");
+				echo "<a href='ADULT_home.php?origin=American Literature" . $currentType . "'><img src='images/adult/america.png'><br><b>American</b></a></td>";
+			echo ($currentPage == "British Literature" ? "<td class='selected'>" : "<td>");
+				echo "<a href='ADULT_home.php?origin=British Literature" . $currentType . "'><img src='images/adult/uk.png'><br><b>British</b></a></td>";
+			echo ($currentPage == "World Literature" ? "<td class='selected'>" : "<td>");
+				echo "<a href='ADULT_home.php?origin=World Literature" . $currentType . "'><img src='images/adult/world.png'><br><b>World</b></a></td>";
+		echo "</tr>";
+	echo "</table>";
+}
+
+function adultTypeHeader($currentPage, $currentOrigin){
+	if($currentOrigin != "") $currentOrigin = ("&origin=" . $currentOrigin);
+	echo "<table class='header' id='bottom'>";
+		echo "<tr align='center' valign='top'>";
+			echo ($currentPage == "All Types" ? "<td class='selected'>" : "<td>");
+				echo "<a href='ADULT_home.php?type=All Types" . $currentOrigin . "'><b>All Works</b></a></td>";
+			echo ($currentPage == "Poetry" ? "<td class='selected'>" : "<td>");
+				echo "<a href='ADULT_home.php?type=Poetry" . $currentOrigin . "'><b>Poetry</b></a></td>";
+			echo ($currentPage == "Stories" ? "<td class='selected'>" : "<td>");
+				echo "<a href='ADULT_home.php?type=Stories" . $currentOrigin . "'><b>Stories</b></a></td>";
+			echo ($currentPage == "Novels" ? "<td class='selected'>" : "<td>");
+				echo "<a href='ADULT_home.php?type=Novels" . $currentOrigin . "'><b>Novels</b></a></td>";
+			echo ($currentPage == "Nonfiction" ? "<td class='selected'>" : "<td>");
+				echo "<a href='ADULT_home.php?type=Nonfiction" . $currentOrigin . "'><b>Nonfiction</b></a></td>";
+			echo ($currentPage == "Plays" ? "<td class='selected'>" : "<td>");
+				echo "<a href='ADULT_home.php?type=Plays" . $currentOrigin . "'><b>Plays</b></a></td>";
 		echo "</tr>";
 	echo "</table><br>";
 }
