@@ -94,6 +94,16 @@ function getAllByAuthorOutOfPool_absolute($author, $pool){
 	return $matches;
 }
 
+function getAllPartsOutOfPool($title, $pool){
+	$matches = array();
+	foreach($pool as $work){
+		if($work['Title'] == $title){
+			array_push($matches, $work);
+		}
+	}
+	return $matches;
+}
+
 function getAllInCategory($query) {
 	ensureDataLoaded();
 	global $data;
@@ -174,9 +184,9 @@ function authorCarousel($category) {
 		if ($work['ThumbnailImage'] == "" || $work['Title'] == "")
 			continue;
 		echo '<div class="carousel_item">' . PHP_EOL;
-		echo '<a href="adult/workslist.php?author=' . $work['Author'] . '">' . PHP_EOL;
+		echo '<a href="ADULT_author.php?author=' . $work['Author'] . '">' . PHP_EOL;
 		echo '<img src="Thumbnails/' . str_replace("\\", "/", $work['ThumbnailImage']) . '">' . PHP_EOL;
-		echo '<div class="carousel_text">' . readyHTML($work['Author']) . '</div>' . PHP_EOL;
+		echo '<div class="carousel_text">' . readyHTML(convertAuthorName($work['Author'])) . '</div>' . PHP_EOL;
 		echo '</a>' . PHP_EOL;
 		echo '</div>' . PHP_EOL;
 	}

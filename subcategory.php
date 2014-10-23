@@ -74,11 +74,12 @@ if(sizeof($categoryExploded) === 3){
 				if(!categoryEqual($work['Category'], $category)) continue;
 				echo "<div style='padding-left: 105px; padding-bottom: 5px;'>";
 				echo "<div style='float:left;'>";
-				echo "<a href='video.php?url=" . $work['FileLocation'] . "&cat=" . $work['Category'] . "'>";
+				if($work['FileLocation'] != "") echo "<a href='video.php?url=" . $work['FileLocation'] . "&cat=" . $work['Category'] . "'>";
 				echo '<img style="height: 135px; width: auto; padding-right: 5px;" src="Thumbnails/' . str_replace("\\", "/", $work['ThumbnailImage']) . '">';
 				echo "</div>";
 				echo "<div style='width:600px; height: 135px; display: table-cell; vertical-align: middle;'>";
-				echo "<h3 style='margin-bottom:0px; padding-top:0px; margin-top:-10px; float:left;'>" . $work['Title'] . "</p></h3></a>";
+				echo "<h3 style='margin-bottom:0px; padding-top:0px; margin-top:-10px; float:left;'>" . $work['Title'] . "</p></h3>";
+				if($work['FileLocation'] != "") echo "</a>";
 				if($work["Length"] != "" || $work["Target"] != ""){
 					echo "<div style='clear:both; padding-left: 5px; display: table-cell;'>";
 					if($work["Target"] != ""){
@@ -89,7 +90,7 @@ if(sizeof($categoryExploded) === 3){
 					echo "</div>";
 				}
 				echo "<div style='clear:both; padding-left: 15px; text-align:justify; width:90%; max-width:450px;'>";
-				echo $work['Description'];
+				echo ($work['FileLocation'] == "" ? "<i>(Coming soon)</i> " : "") . $work['Description'];
 				if($work["Words"] != "") echo " " . $work["Words"] . " words.";
 				echo "</div></div></div>";
 			}

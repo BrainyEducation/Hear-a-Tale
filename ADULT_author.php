@@ -89,9 +89,10 @@ $works = getAllByAuthorOutOfPool_absolute($author, getAllInCategory("Students an
 								. $type . "</a></b></p>";
 								foreach($typeWorks as $work){
 									echo "<p class='AuthorPageWork'>";
-									echo "<a href=ADULT_viewer.php?url=" . $work['FileLocation'] . ">";
+									if($work['FileLocation'] != "") echo "<a href=ADULT_viewer.php?url=" . $work['FileLocation'] . ">";
 									echo $work['Title'] . ($work['Chapter'] != "" ? ", " . $work['Chapter'] : "");
-									echo "</a>";
+									if($work['FileLocation'] == "") echo " <i>(Coming soon)</i>";
+									if($work['FileLocation'] != "") echo "</a>";
 									echo "</p>";
 								}
 							}

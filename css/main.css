@@ -258,3 +258,15 @@ p.source{
 .AuthorPageWork a:hover{
 	color: #000055;
 }
+
+.lightLink a:link{
+	color: #313131;
+}
+
+.lightLink a:visited{
+	color: #414141;
+}
+
+.lightLink a:hover{
+	color: #002266;
+}

@@ -50,15 +50,19 @@ foreach($workData as $authorWork){
                 <?php echo convertAuthorName($authorWork['Author']); ?>
             </a>
         </h4>
-        <div class="authorWorks" dir="rtl" style="max-height:105px; width:110%; overflow:auto;">
+        <div class="authorWorks" dir="rtl" style="max-height:105px; width:110chr%; overflow:auto;">
         <div dir="ltr">
         <?php
             $works = getAllByAuthorOutOfPool($authorWork['Author'], $catData);
             $showAllAll = 0;
             if($showAllAll) shuffle($works);
-            for($i = 0; $i <= ($showAllAll == 1 ? min(2, count($works)) : count($works)); $i++){
+            for($i = 0; $i <= ($showAllAll == 1 ? min(2, count($works) - 1) : count($works) - 1); $i++){
                 $work = $works[$i];
-                echo "<p class='authorWork'><a href='ADULT_viewer.php?url=" . $work['FileLocation'] . "'><i>" . $work['Title'] . "</i></a></p>";
+                if($work['FileLocation'] == ""){
+                    echo "<p class='authorWork'><i>" . $work['Title'] . "</i> (Coming Soon)</p>";
+                }else{
+                    echo "<p class='authorWork'><a href='ADULT_viewer.php?url=" . $work['FileLocation'] . "'><i>" . $work['Title'] . "</i></a></p>";
+                }
             }
         ?>
         </div>
