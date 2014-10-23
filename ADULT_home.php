@@ -16,7 +16,7 @@ $type = $_GET['type'];
 <html lang="en-gb" class="no-js">
 	<!--<![endif]-->
 	<head>
-		<title>Students and Adults - Hear a Tale</title>
+		<title><?php echo ($origin == "" || $origin == "All Origins" ? "All " : explode(" ", $origin)[0] . " ") . ($type == "" || $type  == "All Types" ? "Literature" : $type); ?> - Hear a Tale</title>
 		<?php
 		include ($_SERVER['DOCUMENT_ROOT'] . '/globalHeader.php');
 		?>
@@ -48,8 +48,8 @@ $type = $_GET['type'];
 			$catData = array();
 			if($showAllAll) $catData = $allData;
 			else{
-				if($origin == "All Origins") $origin = "/";
-				if($type == "All Types") $type = "/";
+				if($origin == "All Origins" || $origin == "") $origin = "/";
+				if($type == "All Types" || $type == "") $type = "/";
 				foreach($allData as $work){
 					if(strpos($work['Category'], $origin) != 0 && strpos($work['Category'], $type) != 0){
 						array_push($catData, $work);

@@ -195,3 +195,66 @@ p.source{
 .letterPicker a:hover{
 	color:#444444
 }
+
+.AuthorPage{
+
+}
+
+.AuthorPageImage{
+	float:left;
+	padding-right: 10px;
+}
+
+.AuthorPageName{
+	font-size: 300%;
+	line-height: 110%;
+	padding-top:10px;
+}
+
+.AuthorPageClassification{
+	font-size: 200%;
+	padding-top:-10px;
+	padding-bottom: 5px;
+}
+
+.AuthorPageClassification a:link{
+	color: #414141;
+}
+
+.AuthorPageClassification a:visited{
+	color: #414141;
+}
+
+.AuthorPageBio{
+
+}
+
+.AuthorPageCategory{
+
+}
+
+.AuthorPageCategoryTitle{
+	font-size: 200%;
+	padding-top: 15px;
+}
+
+.AuthorPageCategoryTitle a:link{
+	color: #414141;
+}
+
+.AuthorPageCategoryTitle a:visited{
+	color: #414141;
+}
+
+.AuthorPageWork{
+	font-size: 125%;
+	margin-bottom: 4px;
+}
+
+.AuthorPageWork a:link{
+	color: #313131;
+}
+
+.AuthorPageWork a:hover{
+	color: #000055;
+}

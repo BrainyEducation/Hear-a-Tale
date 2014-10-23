@@ -47,7 +47,7 @@ foreach($workData as $authorWork){
         <div class="authorInfo">
         <h4 class="authorName">
             <a href="ADULT_author.php?author=<?php echo $authorWork['Author']; ?>">
-                <?php echo $authorWork['Author'] ?>
+                <?php echo convertAuthorName($authorWork['Author']); ?>
             </a>
         </h4>
         <div class="authorWorks" dir="rtl" style="max-height:105px; width:110%; overflow:auto;">

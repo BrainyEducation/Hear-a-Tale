@@ -71,12 +71,24 @@ function getAllByAuthor($author){
 }
 
 function getAllByAuthorOutOfPool($author, $pool){
+	ensureDataLoaded();
 	$matches = array();
 	$titles = array();
 	foreach ($pool as $work){
 		if($work['Author'] == $author && !in_array($work['Title'], $titles)){
 			array_push($matches, $work);
 			array_push($titles, $work['Title']);
+		}
+	}
+	return $matches;
+}
+
+function getAllByAuthorOutOfPool_absolute($author, $pool){
+	ensureDataLoaded();
+	$matches = array();
+	foreach ($pool as $work){
+		if($work['Author'] == $author){
+			array_push($matches, $work);
 		}
 	}
 	return $matches;
@@ -171,25 +183,27 @@ function authorCarousel($category) {
 	echo '</div>' . PHP_EOL;
 }
 
-function error404($what){
+function error404($what, $showChildrenIcons = TRUE){
 	$emotes = array(":(",":o",":O","D:",":c",":$","ಠ_ಠ", "(>_<)", "(?_?)", "(-_-)", "(~_~)", "(╯°□°）╯︵ ┻━┻", ":(", "ლ(ಠ益ಠლ)﻿");
 	$error = "<div style='text-align:center;'> <br><h3>The <i>" . $what . "</i> you were looking for could not be found...<br><br>";
 	$error .= $emotes[rand(0, count($emotes)) - 1];
 	$error .= "<br><br>Please go back and try again!</p></h3> </div><br><br><br>";
-	$error .= "<table style='width:100%;'>
-		<tr align='center'>
-			<td><a href='children.php'><img src='images/section_icons/Children.png'></a></td>
-			<td><a href='category.php?cat=Children/Rhymes'><img src='images/section_icons/Children!Rhymes.png'></a></td>
-			<td><a href='category.php?cat=Children/Stories'><img src='images/section_icons/Children!Stories.png'></a></td>
-			<td><a href='category.php?cat=Children/Rhymes and Stories'><img src='images/section_icons/Children!Rhymes_and_Stories.png'></a></td>
-		<tr>
-		<tr align='center' valign='top'>
-			<td>Children's Section</td>
-			<td>Rhymes</td>
-			<td>Stories</td>
-			<td>Rhymes and Stories</td>
-		</tr>
-	</table>";
+	if($showChildrenIcons){
+		$error .= "<table style='width:100%;'>
+			<tr align='center'>
+				<td><a href='children.php'><img src='images/section_icons/Children.png'></a></td>
+				<td><a href='category.php?cat=Children/Rhymes'><img src='images/section_icons/Children!Rhymes.png'></a></td>
+				<td><a href='category.php?cat=Children/Stories'><img src='images/section_icons/Children!Stories.png'></a></td>
+				<td><a href='category.php?cat=Children/Rhymes and Stories'><img src='images/section_icons/Children!Rhymes_and_Stories.png'></a></td>
+			<tr>
+			<tr align='center' valign='top'>
+				<td>Children's Section</td>
+				<td>Rhymes</td>
+				<td>Stories</td>
+				<td>Rhymes and Stories</td>
+			</tr>
+		</table>";
+	}
 	echo $error;
 }
 
@@ -246,6 +260,16 @@ function adultTypeHeader($currentPage, $currentOrigin){
 				echo "<a href='ADULT_home.php?type=Plays" . $currentOrigin . "'><b>Plays</b></a></td>";
 		echo "</tr>";
 	echo "</table><br>";
+}
+
+function convertAuthorName($name){
+	if($name == "O. HENRY (W. S. Porter)") return "O. Henry (W. S. Porter)";
+	$name = strtolower($name);
+	if(strpos($name, ",") != 0){
+		$exploded = explode(",", $name);
+		$name = $exploded[1] . " " . $exploded[0];
+	}
+	return ucwords($name);
 }
 
 ?>
