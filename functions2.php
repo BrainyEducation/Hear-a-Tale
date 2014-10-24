@@ -167,6 +167,7 @@ function twoRowTitleCarousel($category) {
 }
 
 function authorCarousel($category) {
+	$authorPage = ($category == "Southern Literature" ? "SOUTHERN_author.php" : "ADULT_author.php");
 	$catData = getAllInCategory($category);
 	$data = array();
 	$authors = array();
@@ -184,7 +185,7 @@ function authorCarousel($category) {
 		if ($work['ThumbnailImage'] == "" || $work['Title'] == "")
 			continue;
 		echo '<div class="carousel_item">' . PHP_EOL;
-		echo '<a href="ADULT_author.php?author=' . $work['Author'] . '">' . PHP_EOL;
+		echo '<a href="' . $authorPage . '?author=' . $work['Author'] . '">' . PHP_EOL;
 		echo '<img src="Thumbnails/' . str_replace("\\", "/", $work['ThumbnailImage']) . '">' . PHP_EOL;
 		echo '<div class="carousel_text">' . readyHTML(convertAuthorName($work['Author'])) . '</div>' . PHP_EOL;
 		echo '</a>' . PHP_EOL;
@@ -268,6 +269,23 @@ function adultTypeHeader($currentPage, $currentOrigin){
 				echo "<a href='ADULT_home.php?type=Nonfiction" . $currentOrigin . "'><b>Nonfiction</b></a></td>";
 			echo ($currentPage == "Plays" ? "<td class='selected'>" : "<td>");
 				echo "<a href='ADULT_home.php?type=Plays" . $currentOrigin . "'><b>Plays</b></a></td>";
+		echo "</tr>";
+	echo "</table><br>";
+}
+
+function southernTypeHeader($currentPage){
+	echo "<table class='header' id='bottom'>";
+		echo "<tr align='center' valign='top'>";
+			echo ($currentPage == "All Types" ? "<td class='selected'>" : "<td>");
+				echo "<a href='SOUTHERN_home.php?type=All Types'><b>All Works</b></a></td>";
+			echo ($currentPage == "Poetry" ? "<td class='selected'>" : "<td>");
+				echo "<a href='SOUTHERN_home.php?type=Poetry'><b>Poetry</b></a></td>";
+			echo ($currentPage == "Stories" ? "<td class='selected'>" : "<td>");
+				echo "<a href='SOUTHERN_home.php?type=Stories'><b>Stories</b></a></td>";
+			echo ($currentPage == "Novels" ? "<td class='selected'>" : "<td>");
+				echo "<a href='SOUTHERN_home.php?type=Novels'><b>Novels</b></a></td>";
+			echo ($currentPage == "Nonfiction" ? "<td class='selected'>" : "<td>");
+				echo "<a href='SOUTHERN_home.php?type=Nonfiction'><b>Nonfiction</b></a></td>";
 		echo "</tr>";
 	echo "</table><br>";
 }

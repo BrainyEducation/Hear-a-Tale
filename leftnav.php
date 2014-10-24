@@ -4,7 +4,7 @@
             <li><a href='/'>Home</a></li>
             <li><a href='children.php'>Children's Section <img style="width:50px" src = "images/section_icons/Children.png" id="children_sidebar"></a></li>
             <li><a href='ADULT_home.php'>Students and Adults</a></li>
-            <li><a href='adult/southernlist.php'>Southern Literature</a></li>
+            <li><a href='SOUTHERN_home.php'>Southern Literature</a></li>
             <li><a href="ABOUT_intro.php" id="about_menu" href='#'>About</a></li>
         </ul>
     </div>

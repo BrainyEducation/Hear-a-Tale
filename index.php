@@ -54,22 +54,20 @@ require_once ('functions2.php');
 			<br/>
 
 			<fieldset><legend>
-					<a href='adult/adultlist.php'>Students and Adults</a>
+					<a href='ADULT_home.php'>Students and Adults</a>
 			</legend></fieldset>
 			<div style='width:100%; overflow:hidden;'>
 			<?php	authorCarousel("Students and Adults"); ?>
 			</div>
 			<br/>
 
-			<!--
 			<fieldset><legend>
-					<a href='adult/southernlist.php'>Southern Literature</a>
+					<a href='SOUTHERN_home.php'>Southern Literature</a>
 			</legend></fieldset>
 			<div style='width:100%; overflow:hidden;'>
-			<?php	authorCarousel("Students and Adults/Southern Literature"); ?>
+			<?php	authorCarousel("Southern Literature"); ?>
 			</div>
 			<br/>
-			---->
 
 		</div>
 

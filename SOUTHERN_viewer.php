@@ -19,7 +19,7 @@ if($url != ""){
 	$previousVideo = NULL;
 	$nextVideo = NULL;
 
-	$otherParts = getAllPartsOutOfPool($play['Title'], getAllInCategory("Students and Adults"));
+	$otherParts = getAllPartsOutOfPool($play['Title'], getAllInCategory("Southern Literature"));
 	if(count($otherParts) > 1){
 		$thisPart = $play['Chapter'];
 		for($i = 0; $i < count($otherParts); $i++){
@@ -144,15 +144,14 @@ if($url != ""){
 		<p class="lightLink" style="font-size:175%;">
 			<?php
 			$exploded = explode("/", $work['Category']);
-			$origin = $exploded[1];
 			$type = $exploded[2];
 			?>
-			<a href='ADULT_home.php?origin=<?php echo $origin; ?>&type=<?php echo $type; ?>'>
-				<?php echo explode(" ", $origin)[0] . " " . $type; ?>
+			<a href='SOUTHERN_home.php?type=<?php echo $type; ?>'>
+				<?php echo "Southern " . $type; ?>
 			</a>
 		</p>
 		<p class="lightLink" style="font-size:175%;"> by
-			<a href='ADULT_author.php?author=<?php echo $play['Author']; ?>'>
+			<a href='SOUTHERN_author.php?author=<?php echo $play['Author']; ?>'>
 				<?php echo convertAuthorName($play['Author']); ?>
 			</a>
 		</p>
@@ -186,14 +185,14 @@ if($url != ""){
 				<tr align="center">
 					<?php if($previousVideo != null){ ?>
 					<td>
-						<a href="ADULT_viewer.php?url=<?php echo $previousVideo['FileLocation']; ?>">
+						<a href="SOUTHERN_viewer.php?url=<?php echo $previousVideo['FileLocation']; ?>">
 							<img src="images/section_icons/arrow_left.png">
 						</a>
 					</td>
 					<?php } ?>
 					<?php if($nextVideo != null){ ?>
 						<td>
-							<a href="ADULT_viewer.php?url=<?php echo $nextVideo['FileLocation']; ?>">
+							<a href="SOUTHERN_viewer.php?url=<?php echo $nextVideo['FileLocation']; ?>">
 								<img src="images/section_icons/arrow_right.png">
 							</a>
 						</td>
@@ -203,14 +202,14 @@ if($url != ""){
 				<tr align="center">
 					<?php if($previousVideo != null){ ?>
 					<td>
-						<a href="ADULT_viewer.php?url=<?php echo $previousVideo['FileLocation']; ?>">
+						<a href="SOUTHERN_viewer.php?url=<?php echo $previousVideo['FileLocation']; ?>">
 							<?php echo $previousVideo['Chapter']; ?>
 						</a>
 					</td>
 					<?php } ?>
 					<?php if($nextVideo != null){ ?>
 						<td>
-							<a href="ADULT_viewer.php?url=<?php echo $nextVideo['FileLocation']; ?>">
+							<a href="SOUTHERN_viewer.php?url=<?php echo $nextVideo['FileLocation']; ?>">
 								<?php echo $nextVideo['Chapter']; ?>
 							</a>
 						</td>
