@@ -15,7 +15,7 @@ $type = $_GET['type'];
 <html lang="en-gb" class="no-js">
 	<!--<![endif]-->
 	<head>
-		<title><?php echo ($origin == "" || $origin == "All Origins" ? "All " : explode(" ", $origin)[0] . " ") . ($type == "" || $type  == "All Types" ? "Literature" : $type); ?> - Hear a Tale</title>
+		<title><?php echo "Southern " . ($type == "" || $type  == "All Types" ? "Literature" : $type); ?> - Hear a Tale</title>
 		<?php
 		include ($_SERVER['DOCUMENT_ROOT'] . '/globalHeader.php');
 		?>
