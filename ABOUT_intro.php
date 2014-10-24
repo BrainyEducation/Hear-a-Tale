@@ -37,6 +37,8 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 			<p>A generous grant from PotashCorp in 2010 allowed us to manufacture and distribute 3500 discs, and an anonymous donor allowed us to distribute 700 more.  An even more generous 2011 grants from PotashCorp, a sizeable commitment from the Richmond County School Board, and an anonymous donor allowed us to create and distribute in Fall 2011 30,000 discs with 10 hours of audio plus pictures and text, enough discs to place one in the hand of every kindergarten and pre-K student, teacher, and in every Media Center in 14 surrounding counties and donate 200 to the local library system.</p>
 			<p><b>Please donate to the English Program Schools Project at Georgia Regents University.</b></p>
 			<p>Most of the children who most need these resources have no online computer access in the home, though the great majority do have a DVD player, Xbox or Playstation for which the disc is designed.  We would love to be able to provide discs for these children, and to day care centers, Prime Time, Boys Clubs, Girls Clubs, hospitals—wherever children can benefit from them.  All donations are tax deductible; please visit our Foundation website at <a href="https://giving.gru.edu/donate">https://giving.gru.edu/donate</a>  or email <a href="mailto:rhymeazoo@gru.edu">rhymeazoo@gru.edu</a> or phone 706-729-2167 or 706-737-1500.</p>
+			<p><b>Walter Evans</b>, Project Director <br>
+				<b>Cal Stephens</b>, Webmaster</p>
 
 
 		<?php
