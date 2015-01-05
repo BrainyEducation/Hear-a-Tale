@@ -31,6 +31,9 @@ if($url != ""){
 	}
 
 }
+
+$isAudio = substr($url, -4) === ".mp3";
+
 ?>
 
 <!DOCTYPE html>
@@ -157,68 +160,92 @@ if($url != ""){
 			</a>
 		</p>
 		<br>
+        
+        <div id="viewer-left" <?php if($isAudio){ ?> style="float:left; width: 300px; <?php } ?>">
+            <?php if($isAudio){ ?>
+                <div style='width:300px; height:auto; background-color:#dddddd;'>
 
-		<?php if(substr($url, -4) === ".mp3"){ ?>
-			<div style='width:300px; height:auto; background-color:#dddddd;'>
+                    <img style='width=auto; height:auto; display: table; margin:0 auto;' src="Thumbnails/<?php echo $play['ThumbnailImage']; ?>">
+                </div>
+            <?php } ?>
 
-				<img style='width=auto; height:auto; display: table; margin:0 auto;' src="Thumbnails/<?php echo $play['ThumbnailImage']; ?>">
+            <div data-swf="//releases.flowplayer.org/5.4.6/flowplayer.swf"
+            class="flowplayer fixed-controls no-toggle play-button color-light"
+            data-ratio="0.5625" data-embed="false">
+                <?php if(substr($url, -4) === ".mp3"){ ?>
+                <audio controls preload="auto">
+                    <source type="audio/mp3" src="http://podcasting.gcsu.edu/4DCGI/Podcasting/GRU/Episodes/<?php echo $url;	?>" >
+                </audio>
+                <?php } else { ?>
+                <video preload="auto">
+                    <source type="video/mp4" src="http://podcasting.gcsu.edu/4DCGI/Podcasting/GRU/Episodes/<?php echo $url;	?>"/>
+                </video>
+                <?php } ?>
+            </div>
 
-			</div>
-		<?php } ?>
+            <?php if($previousVideo != null || $nextVideo != null){ ?>
+                <?php if($isAudio){ ?>
+                <table style="width:300px; margin-top: 20px;">
+                <?php } else { ?>
+                <table style="width:80%; margin-top: 20px;"> 
+                <?php } ?>
+                    <tr align="center">
+                        <?php if($previousVideo != null){ ?>
+                        <td>
+                            <a href="ADULT_viewer.php?url=<?php echo $previousVideo['FileLocation']; ?>">
+                                <img src="images/section_icons/arrow_left.png">
+                            </a>
+                        </td>
+                        <?php } ?>
+                        <?php if($nextVideo != null){ ?>
+                            <td>
+                                <a href="ADULT_viewer.php?url=<?php echo $nextVideo['FileLocation']; ?>">
+                                    <img src="images/section_icons/arrow_right.png">
+                                </a>
+                            </td>
+                        <?php } ?>
+                    </tr>
 
-		<div data-swf="//releases.flowplayer.org/5.4.6/flowplayer.swf"
-		class="flowplayer fixed-controls no-toggle play-button color-light"
-		data-ratio="0.5625" data-embed="false">
-			<?php if(substr($url, -4) === ".mp3"){ ?>
-			<audio controls preload="auto">
-				<source type="audio/mp3" src="http://podcasting.gcsu.edu/4DCGI/Podcasting/GRU/Episodes/<?php echo $url;	?>" >
-			</audio>
-			<?php } else { ?>
-			<video preload="auto">
-				<source type="video/mp4" src="http://podcasting.gcsu.edu/4DCGI/Podcasting/GRU/Episodes/<?php echo $url;	?>"/>
-			</video>
-			<?php } ?>
-		</div>
+                    <tr align="center">
+                        <?php if($previousVideo != null){ ?>
+                        <td>
+                            <a href="ADULT_viewer.php?url=<?php echo $previousVideo['FileLocation']; ?>">
+                                <?php echo $previousVideo['Chapter']; ?>
+                            </a>
+                        </td>
+                        <?php } ?>
+                        <?php if($nextVideo != null){ ?>
+                            <td>
+                                <a href="ADULT_viewer.php?url=<?php echo $nextVideo['FileLocation']; ?>">
+                                    <?php echo $nextVideo['Chapter']; ?>
+                                </a>
+                            </td>
+                        <?php } ?>
+                    </tr>
+                </table>
 
-		<?php if($previousVideo != null || $nextVideo != null){ ?>
+            <?php } ?>
+        </div>
+    
+        <?php if($isAudio){ ?>
+        <div class="viewer-right">
+            <p style="font-size:200%; line-height:110%;"><b>Written Text</b></p>
+            <?php
+                $textFileName = "work_text/lorem.txt";
+                if(file_exists($textFileName)) {
+                    echo '<p class="WorkText">';
+                    $textFile = fopen($textFileName, "r") or die("Unable to read work text file.");
+                    $text = fread($textFile, filesize($textFileName));
+                    $text = str_replace("\n", "</p><p>", $text);
+                    echo "<p>" . $text . "</p>";
+                    fclose($textFile);
+                    echo '</p>';
+                }
+            ?>
 
-			<table style="width:300px; margin-top: 20px;">
-				<tr align="center">
-					<?php if($previousVideo != null){ ?>
-					<td>
-						<a href="ADULT_viewer.php?url=<?php echo $previousVideo['FileLocation']; ?>">
-							<img src="images/section_icons/arrow_left.png">
-						</a>
-					</td>
-					<?php } ?>
-					<?php if($nextVideo != null){ ?>
-						<td>
-							<a href="ADULT_viewer.php?url=<?php echo $nextVideo['FileLocation']; ?>">
-								<img src="images/section_icons/arrow_right.png">
-							</a>
-						</td>
-					<?php } ?>
-				</tr>
-
-				<tr align="center">
-					<?php if($previousVideo != null){ ?>
-					<td>
-						<a href="ADULT_viewer.php?url=<?php echo $previousVideo['FileLocation']; ?>">
-							<?php echo $previousVideo['Chapter']; ?>
-						</a>
-					</td>
-					<?php } ?>
-					<?php if($nextVideo != null){ ?>
-						<td>
-							<a href="ADULT_viewer.php?url=<?php echo $nextVideo['FileLocation']; ?>">
-								<?php echo $nextVideo['Chapter']; ?>
-							</a>
-						</td>
-					<?php } ?>
-				</tr>
-			</table>
-
-		<?php } ?>
+        </div>
+        <?php } ?>
+    
 
 <?php
 	} else error404('video');

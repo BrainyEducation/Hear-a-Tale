@@ -270,3 +270,11 @@ p.source{
 .lightLink a:hover{
 	color: #002266;
 }
+
+#viewer-left{
+    padding-right: 20px;
+}
+
+.viewer-right{
+    padding-right: 10px;
+}
