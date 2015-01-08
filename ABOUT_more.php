@@ -29,7 +29,48 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 
 		<div class="span9" style="margin-left:5px; margin-right:5px;">
 			<div style="clear: both;"></div>
-			<?php aboutHeader("More Information"); ?>
+			<?php aboutHeader("Resources"); ?>
+            
+            <h1 style="padding-top:10px; margin-top:-10px; margin-bottom:-10px; margin-right: 5px; float:left;">Classroom Posters and Diplomas</h1>
+            <h5 style="display:inline-block; padding-top:10px;">Click thumbnail to download</h5>
+            <table width="100%">
+            <tr>
+                <td></td>
+                <td align="center"><h4>Blank</h4></td>
+                <td align="center"><h4>20 Stories</h4></td>
+                <td align="center"><h4>30 Stories</h4></td>
+                <td align="center"><h4>40 Stories</h4></td>
+            </tr>
+            <tr>
+                <td align="center"><h4 style="margin-bottom:-10px;">8.5" x 11"<h6>Printer Paper</h6></h4></td>
+                <td align="center"><a href="images/posters/Rhymes%20and%20Stories%20Chart%20Blank%20(8.5%20x%2011).png" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/Blank%208.5.png"</a></td>
+                <td align="center"><a href="images/posters/Rhymes%20and%20Stories%20Chart%2020%20(8.5%20x%2011).png" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/20%208.5.png"</a></td>
+                <td align="center"><a href="images/posters/Rhymes%20and%20Stories%20Chart%2030%20(8.5%20x%2011).png" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/30%208.5.png"</a></td>
+                <td align="center"><a href="images/posters/Rhymes%20and%20Stories%20Chart%2040%20(8.5%20x%2011).png" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/40%208.5.png"</a></td>
+            </tr>
+            <tr>
+                <td align="center"><h4 style="margin-bottom:-10px;">11" x 17"<h6>Tabloid Paper</h6></h4></td>
+                <td align="center"></td>
+                <td align="center"><a href="images/posters/Rhymes%20and%20Stories%20Chart%2020%20(11%20x%2017).png" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/20%2011.png"</a></td>
+                <td align="center"><a href="images/posters/Rhymes%20and%20Stories%20Chart%2030%20(11%20x%2017).png" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/30%2011.png"</a></td>
+                <td align="center"><a href="images/posters/Rhymes%20and%20Stories%20Chart%2040%20(11%20x%2017).png" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/40%2011.png"</a></td>
+            </tr>
+            <tr>
+                <td align="center"><h4 style="margin-bottom:-10px;">13" x 19"<h6>Super B Paper</h6></h4></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"><a href="images/posters/Rhymes%20and%20Stories%20Chart%2040%20(13%20x%2019).png" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/40%2013.png"</a></td>
+            </tr>
+            <tr>
+                <td align="center"><h4 style="margin-bottom:-10px;">Diploma<h6>Printer Paper</h6></h4></td>
+                <td align="center"></td>
+                <td align="center"><a href="images/posters/Diplomas%20for%20Rhymes%20and%20Stories%20Degree.rtf" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/diploma.png"</a></td>
+                <td align="center"><a href="images/posters/Diplomas%20for%20Rhymes%20and%20Stories%20Degree.rtf" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/diploma.png"</a></td>
+                <td align="center"><a href="images/posters/Diplomas%20for%20Rhymes%20and%20Stories%20Degree.rtf" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/diploma.png"</a></td>
+            </tr>
+            </table>
+            
 			<h1>Online Resources</h1>
 			<h3>TV News Stories</h3>
 			<p><a href="http://www.wrdw.com/home/headlines/GRU-makes-video-game-to-help-kids-who-cant-read-191291511.html">GRU makes video game to help kids learn reading skills</a> <b>(</b><i>WRDW</i>, February 2013<b>)</b></p>
