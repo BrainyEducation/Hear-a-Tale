@@ -30,9 +30,8 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 		<div class="span9" style="margin-left:5px; margin-right:5px;">
 			<div style="clear: both;"></div>
 			<?php aboutHeader("Resources"); ?>
-            
-            <h1 style="padding-top:10px; margin-top:-10px; margin-bottom:-10px; margin-right: 5px; float:left;">Classroom Posters and Diplomas</h1>
-            <h5 style="display:inline-block; padding-top:10px;">Click thumbnail to download</h5>
+            <h1 style="padding-top:10px; margin-top:-10px; margin-bottom:-10px; margin-right: 5px; float:left;">Classroom Posters</h1>
+            <h5 style="display:inline-block; padding-top:10px;">Click image to download</h5>
             <table width="100%">
             <tr>
                 <td></td>
@@ -62,14 +61,17 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
                 <td align="center"></td>
                 <td align="center"><a href="images/posters/Rhymes%20and%20Stories%20Chart%2040%20(13%20x%2019).png" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/40%2013.png"</a></td>
             </tr>
-            <tr>
-                <td align="center"><h4 style="margin-bottom:-10px;">Diploma<h6>Printer Paper</h6></h4></td>
-                <td align="center"></td>
-                <td align="center"><a href="images/posters/Diplomas%20for%20Rhymes%20and%20Stories%20Degree.rtf" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/diploma.png"</a></td>
-                <td align="center"><a href="images/posters/Diplomas%20for%20Rhymes%20and%20Stories%20Degree.rtf" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/diploma.png"</a></td>
-                <td align="center"><a href="images/posters/Diplomas%20for%20Rhymes%20and%20Stories%20Degree.rtf" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/diploma.png"</a></td>
-            </tr>
             </table>
+            <p>&emsp;&emsp;Download and print out one or more of the posters above to help keep track of how many, and which, stories your children listened to on the website or the DVDs. Most posters feature story titles, along with thumbnail pictures which very young children can ‘read’—some posters also include blank spaces in which you can hand letter titles of other stories you or the child might prefer.  For each poster the first two titles refer to the rhymes-only versions of “Mother Goose Visit” and “Father Goose Visit.”</p>
+            <p>&emsp;&emsp;Depending on printers you have available, you can print out posters in black ink or in color, on paper or cardboard, and can choose among three different sizes.  Once posters are printed, in the rows on the left you can write in names of children and then mark an x or checkmark or use a sticker in appropriate boxes to indicate which stories they know—perhaps with different symbols to indicate whether a child listened to a story once or twice or three or more times.  Repeated experiences of a single story are extremely important in helping children learn to better understand and to master new words, phrases, grammatical structures, sentence patterns, and other crucial linguistic elements.  Fluent listeners become fluent readers.</p><p>&emsp;&emsp;A teacher might use one 40-story poster for the entire class, and award students as appropriate a diploma for 20 stories (Expert) or 30 stories (Esteemed Expert) or 40 stories (Highly Esteemed Expert).  The 40-story poster, incidentally, lists 41 story titles (not including the rhyme 'visits') so a child would earn the diploma though skipping one story, or might perhaps skip three stories if the teacher counts each rhyme 'visit' as one story.</p>
+            
+            <h1 style="padding-top:10px; margin-top:-10px; margin-bottom:-10px; margin-right: 5px; float:left;">Diplomas</h1>
+            <h5 style="display:inline-block; padding-top:10px;">Click image to download</h5>
+            <br>
+            <a href="images/posters/Diplomas%20for%20Rhymes%20and%20Stories%20Degree.rtf" target="_blank">
+                <img style="width:30%; padding-right:20px; float:left;" src="images/posters/thumbs/diploma%20large%20image.png">
+            </a>
+            <p>&emsp;&emsp;In addition to experiencing multiple retellings of individual stories, it’s extremely important to motivate children to listen to as many new and challenging stories and rhymes as they’re able to enjoy.  To the left you’ll find diplomas which you can print out and award to children who listen to the two rhyme collections and 20 stories (Expert), 30 stories (Esteemed Expert), or 40 stories (Highly Esteemed Expert).  If you’d prefer to change any of the phrasing on the diploma, simply download the file and edit it as you please.  Teachers may prefer to identify the granting authority as the teachers and administrators of the school, may prefer to name the school and school system, may decide to add a place for the principal sign at the bottom in addition to the teacher, or may identify the single signature at the bottom as by the ‘Parent’ rather than the ‘Teacher.’  Diplomas may be printed out in black ink, though some may be printed in color, and may be printed on white or manila or colored paper or card stock.</p>
             
 			<h1>Online Resources</h1>
 			<h3>TV News Stories</h3>

@@ -8,7 +8,7 @@
             <li><a href="ABOUT_intro.php" id="about_menu" href='#'>About</a></li>
         </ul>
     </div>
-    <img src="images/einstein-small.png" style="width:75%; margin-left:5%; max-width:220px;"></a>
+    <a href="ABOUT_why.php"><img src="images/einstein-small.png" style="width:75%; margin-left:5%; max-width:220px;"></a>
 </div>
 
 <div class="mobileNav">
