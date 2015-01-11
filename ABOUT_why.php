@@ -33,8 +33,6 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 
 			<h1>Why Classic Rhymes and Stories Matter</h1>
             
-            <p><b>Kindergarten children in under-performing schools who regularly listened to our rhymes and stories for 9 months improved their vocabulary scores from the 27th to the 47th percentile.  Three years later on statewide 3rd grade reading tests they scored in the higher range 33% more often than classmates who had not listened to our rhymes and stories (<a href="http://www.rcboe.org/download.axd?file=b6dda0b8-26b4-46e3-bff3-4380a3c910b0&dnldType=Resource">source</a>).</b></p>
-            
 			<p>A rare child might find joy in almost every rhyme and story and picture on the site; some may dislike them all.  Given the opportunity, many children will discover they like some rhymes, a few tales, but may find the rest boring, and after dallying with the site a while, will reject these book-like presentations for a movie or tv show or video game that renders them passive by stimulating their senses far more than their minds.  God bless them.</p>
 
 			<p>Still, we believe—and the research demonstrates—that the more time young children spend with nursery rhymes and classic fables and folk tales and fairy tales, the more efficiently they develop a wide variety of linguistic abilities, the more quickly they become literate, and the more successful they are in school and beyond school.</p>

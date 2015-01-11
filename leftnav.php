@@ -6,9 +6,10 @@
             <li><a href='ADULT_home.php'>Students and Adults</a></li>
             <li><a href='SOUTHERN_home.php'>Southern Literature</a></li>
             <li><a href="ABOUT_intro.php" id="about_menu" href='#'>About</a></li>
+            <li><a href="ABOUT_contact.php" id="about_menu" href='#'>Contact Us</a></li>
         </ul>
     </div>
-    <a href="ABOUT_why.php"><img src="images/einstein-small.png" style="width:75%; margin-left:5%; max-width:220px;"></a>
+    <a href="ABOUT_einstein.php"><img src="images/einstein-small.png" style="width:75%; margin-left:5%; max-width:220px;"></a>
 </div>
 
 <div class="mobileNav">
