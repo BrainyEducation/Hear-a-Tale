@@ -31,6 +31,8 @@ if($url != ""){
 	}
 
 }
+
+$isAudio = substr($url, -4) === ".mp3";
 ?>
 
 <!DOCTYPE html>
@@ -157,67 +159,109 @@ if($url != ""){
 		</p>
 		<br>
 
-		<?php if(substr($url, -4) === ".mp3"){ ?>
-			<div style='width:300px; height:auto; background-color:#dddddd;'>
+		<div id="viewer-left" <?php if($isAudio){ ?> style="float:left; width: 300px; <?php } ?>">
+            <?php if($isAudio){ ?>
+                <div style='width:300px; height:auto; background-color:#dddddd;'>
 
-				<img style='width=auto; height:auto; display: table; margin:0 auto;' src="Thumbnails/<?php echo $play['ThumbnailImage']; ?>">
+                    <img style='width=auto; height:auto; display: table; margin:0 auto;' src="Thumbnails/<?php echo $play['ThumbnailImage']; ?>">
+                </div>
+            <?php } ?>
 
-			</div>
-		<?php } ?>
+            <div data-swf="//releases.flowplayer.org/5.4.6/flowplayer.swf"
+            class="flowplayer fixed-controls no-toggle play-button color-light"
+            data-ratio="0.5625" data-embed="false">
+                <?php if(substr($url, -4) === ".mp3"){ ?>
+                <audio controls preload="auto">
+                    <source type="audio/mp3" src="http://podcasting.gcsu.edu/4DCGI/Podcasting/GRU/Episodes/<?php echo $url;	?>" >
+                </audio>
+                <?php } else { ?>
+                <video preload="auto">
+                    <source type="video/mp4" src="http://podcasting.gcsu.edu/4DCGI/Podcasting/GRU/Episodes/<?php echo $url;	?>"/>
+                </video>
+                <?php } ?>
+            </div>
 
-		<div data-swf="//releases.flowplayer.org/5.4.6/flowplayer.swf"
-		class="flowplayer fixed-controls no-toggle play-button color-light"
-		data-ratio="0.5625" data-embed="false">
-			<?php if(substr($url, -4) === ".mp3"){ ?>
-			<audio controls preload="auto">
-				<source type="audio/mp3" src="http://podcasting.gcsu.edu/4DCGI/Podcasting/GRU/Episodes/<?php echo $url;	?>" >
-			</audio>
-			<?php } else { ?>
-			<video preload="auto">
-				<source type="video/mp4" src="http://podcasting.gcsu.edu/4DCGI/Podcasting/GRU/Episodes/<?php echo $url;	?>"/>
-			</video>
-			<?php } ?>
-		</div>
+            <?php if($previousVideo != null || $nextVideo != null){ ?>
+                <?php if($isAudio){ ?>
+                <table style="width:300px; margin-top: 20px;">
+                <?php } else { ?>
+                <table style="width:80%; margin-top: 20px;"> 
+                <?php } ?>
+                    <tr align="center">
+                        <?php if($previousVideo != null){ ?>
+                        <td>
+                            <a href="SOUTHERN_viewer.php?url=<?php echo $previousVideo['FileLocation']; ?>">
+                                <img src="images/section_icons/arrow_left.png">
+                            </a>
+                        </td>
+                        <?php } ?>
+                        <?php if($nextVideo != null){ ?>
+                            <td>
+                                <a href="SOUTHERN_viewer.php?url=<?php echo $nextVideo['FileLocation']; ?>">
+                                    <img src="images/section_icons/arrow_right.png">
+                                </a>
+                            </td>
+                        <?php } ?>
+                    </tr>
 
-		<?php if($previousVideo != null || $nextVideo != null){ ?>
+                    <tr align="center">
+                        <?php if($previousVideo != null){ ?>
+                        <td>
+                            <a href="SOUTHERN_viewer.php?url=<?php echo $previousVideo['FileLocation']; ?>">
+                                <?php echo $previousVideo['Chapter']; ?>
+                            </a>
+                        </td>
+                        <?php } ?>
+                        <?php if($nextVideo != null){ ?>
+                            <td>
+                                <a href="SOUTHERN_viewer.php?url=<?php echo $nextVideo['FileLocation']; ?>">
+                                    <?php echo $nextVideo['Chapter']; ?>
+                                </a>
+                            </td>
+                        <?php } ?>
+                    </tr>
+                </table>
 
-			<table style="width:300px; margin-top: 20px;">
-				<tr align="center">
-					<?php if($previousVideo != null){ ?>
-					<td>
-						<a href="SOUTHERN_viewer.php?url=<?php echo $previousVideo['FileLocation']; ?>">
-							<img src="images/section_icons/arrow_left.png">
-						</a>
-					</td>
-					<?php } ?>
-					<?php if($nextVideo != null){ ?>
-						<td>
-							<a href="SOUTHERN_viewer.php?url=<?php echo $nextVideo['FileLocation']; ?>">
-								<img src="images/section_icons/arrow_right.png">
-							</a>
-						</td>
-					<?php } ?>
-				</tr>
+            <?php } ?>
+        </div>
+    
+        <?php if($isAudio){ ?>
+        <div class="viewer-right">
+            <?php
+                $fixedTitle = $play['Title'];
+                $fixedTitle = str_replace(":", "~", $fixedTitle);
+                if($fixedTitle[0] == " "){
+                    $fixedTitle = substr($fixedTitle, 1);
+                }
+                $textFileName = "work_text/" . $fixedTitle;
+                if($play['Chapter'] != null){
+                    $textFileName .= "," . $play['Chapter'];
+                }
+                $textFileName .= "-" . convertAuthorName($play['Author']) . ".txt";
+                if(file_exists($textFileName)) {
+                    echo '<p style="font-size:200%; line-height:110%;"><b>Written Text</b></p>';
+                    echo '<p>';
+                    $textFile = fopen($textFileName, "r") or die("Unable to read work text file.");
+                    $text = fread($textFile, filesize($textFileName));
+                    $text = str_replace("\n\n", "</p><p>", $text);
+                    $text = str_replace("\n", '</p><p style="margin-top:-10px;">', $text);
+                    //also replacing this weird other line-break character that showed up a few times
+                    $text = str_replace("  ", "</p><p>", $text);
+                    $text = str_replace(" ", '</p><p style="margin-top:-10px;">', $text);
+                    if (strlen($text) < 2500){
+                        echo "<div class='workText' style='margin-left:320px'>";
+                    } else {
+                        echo "<div class='workText'>";
+                    }
+                    echo $text . "</div>";
+                    fclose($textFile);
+                    echo '</p>';
+                }
+            ?>
 
-				<tr align="center">
-					<?php if($previousVideo != null){ ?>
-					<td>
-						<a href="SOUTHERN_viewer.php?url=<?php echo $previousVideo['FileLocation']; ?>">
-							<?php echo $previousVideo['Chapter']; ?>
-						</a>
-					</td>
-					<?php } ?>
-					<?php if($nextVideo != null){ ?>
-						<td>
-							<a href="SOUTHERN_viewer.php?url=<?php echo $nextVideo['FileLocation']; ?>">
-								<?php echo $nextVideo['Chapter']; ?>
-							</a>
-						</td>
-					<?php } ?>
-				</tr>
-			</table>
-
-		<?php } ?>
+        </div>
+        <?php } ?>
+    
 
 <?php
 	} else error404('video');

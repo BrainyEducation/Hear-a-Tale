@@ -297,6 +297,9 @@ function convertAuthorName($name){
 		$exploded = explode(",", $name);
 		$name = $exploded[1] . " " . $exploded[0];
 	}
+    if ($name[0] == " ") {
+        $name = substr($name, 1);
+    }
 	return ucwords($name);
 }
 

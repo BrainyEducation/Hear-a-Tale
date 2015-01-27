@@ -278,3 +278,7 @@ p.source{
 .viewer-right{
     padding-right: 10px;
 }
+
+.workText{
+    text-indent: 30px;
+}
