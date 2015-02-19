@@ -90,7 +90,7 @@ if(sizeof($categoryExploded) === 3){
 					echo "</div>";
 				}
 				echo "<div style='clear:both; padding-left: 15px; text-align:justify; width:90%; max-width:450px;'>";
-				echo ($work['FileLocation'] == "" ? "<i>(Coming soon)</i> " : "") . $work['Description'];
+				echo ($work['FileLocation'] == "" ? "<i>(Not Available)</i> " : "") . $work['Description'];
 				if($work["Words"] != "") echo " " . $work["Words"] . " words.";
 				echo "</div></div></div>";
 			}

@@ -11,8 +11,10 @@ if($url != ""){
 
 	foreach ($data as $work) {
 		if ($work['FileLocation'] == $url) {
-			$play = $work;
-			break;
+            if (strpos($work['Category'], 'South') !== FALSE) { //make sure result is in right category
+                $play = $work;
+                break;
+            }
 		}
 	}
 
@@ -29,6 +31,17 @@ if($url != ""){
 			}
 		}
 	}
+    
+    $fixedTitle = $play['Title'];
+    $fixedTitle = str_replace(":", "~", $fixedTitle);
+    if($fixedTitle[0] == " "){
+        $fixedTitle = substr($fixedTitle, 1);
+    }
+    $textFileName = "work_text/" . $fixedTitle;
+    if($play['Chapter'] != null){
+        $textFileName .= "," . $play['Chapter'];
+    }
+    $textFileName .= "-" . convertAuthorName($play['Author']) . ".txt";
 
 }
 
@@ -158,8 +171,8 @@ $isAudio = substr($url, -4) === ".mp3";
 			</a>
 		</p>
 		<br>
-
-		<div id="viewer-left" <?php if($isAudio){ ?> style="float:left; width: 300px; <?php } ?>">
+    
+		<div id="viewer-left" <?php if($isAudio){ ?> style="width: 300px; <?php if(file_exists($textFileName)) { ?> float: right; <?php } ?> padding: 20px; margin-right: 50px;<?php } ?>">
             <?php if($isAudio){ ?>
                 <div style='width:300px; height:auto; background-color:#dddddd;'>
 
@@ -228,16 +241,6 @@ $isAudio = substr($url, -4) === ".mp3";
         <?php if($isAudio){ ?>
         <div class="viewer-right">
             <?php
-                $fixedTitle = $play['Title'];
-                $fixedTitle = str_replace(":", "~", $fixedTitle);
-                if($fixedTitle[0] == " "){
-                    $fixedTitle = substr($fixedTitle, 1);
-                }
-                $textFileName = "work_text/" . $fixedTitle;
-                if($play['Chapter'] != null){
-                    $textFileName .= "," . $play['Chapter'];
-                }
-                $textFileName .= "-" . convertAuthorName($play['Author']) . ".txt";
                 if(file_exists($textFileName)) {
                     echo '<p style="font-size:200%; line-height:110%;"><b>Written Text</b></p>';
                     echo '<p>';
@@ -248,12 +251,7 @@ $isAudio = substr($url, -4) === ".mp3";
                     //also replacing this weird other line-break character that showed up a few times
                     $text = str_replace("  ", "</p><p>", $text);
                     $text = str_replace(" ", '</p><p style="margin-top:-10px;">', $text);
-                    if (strlen($text) < 2500){
-                        echo "<div class='workText' style='margin-left:320px'>";
-                    } else {
-                        echo "<div class='workText'>";
-                    }
-                    echo $text . "</div>";
+                    echo "<div class='workText'>" . $text . "</div>";
                     fclose($textFile);
                     echo '</p>';
                 }
