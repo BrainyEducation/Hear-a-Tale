@@ -162,7 +162,14 @@ $isAudio = substr($url, -4) === ".mp3";
 			$type = $exploded[2];
 			?>
 			<a href='SOUTHERN_home.php?type=<?php echo $type; ?>'>
-				<?php echo "Southern " . $type; ?>
+				<?php 
+                    $singularType = $type;
+                    if ($type === "Books") { $singularType = "Book"; }
+                    else if ($type === "Stories") { $singularType = "Story"; }
+                    else if ($type === "Plays") { $singularType = "Play"; }
+                    else if ($type === "Poetry") { $singularType = "Poem"; }
+                    echo "Southern " . $singularType; 
+                ?>
 			</a>
 		</p>
 		<p class="lightLink" style="font-size:175%;"> by

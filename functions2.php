@@ -149,7 +149,9 @@ function twoRowTitleCarousel($category) {
 	$max = 14;
 	for ($x = 0; $x < min($max, count($data)); $x++) {
 		$work = $data[$x];
-		if ($work['ThumbnailImage'] == "" || $work['Title'] == "" || $work['FileLocation'] == "" || getimagesize('Thumbnails/' . str_replace("\\", "/", $work['ThumbnailImage']))[1] > 120){
+		if ($work['ThumbnailImage'] == "" || $work['Title'] == "" || $work['FileLocation'] == "" 
+            || getimagesize('Thumbnails/' . str_replace("\\", "/", $work['ThumbnailImage']))[1] > 120){
+            
 			$max++;
 			continue;
 		}
@@ -171,8 +173,10 @@ function authorCarousel($category) {
 	$catData = getAllInCategory($category);
 	$data = array();
 	$authors = array();
+    $southern = getAllInCategory("Southern Literature");
 	foreach($catData as $work){
 		if($work['Author'] == "" || is_null($work['Author'])) continue;
+        if($category != "Southern Literature" && in_array_r($work['Author'], $southern)) continue;
 		if(!in_array($work['Author'], $authors)){
 			array_push($data, $work);
 			array_push($authors, $work['Author']);
@@ -263,8 +267,8 @@ function adultTypeHeader($currentPage, $currentOrigin){
 				echo "<a href='ADULT_home.php?type=Poetry" . $currentOrigin . "'><b>Poetry</b></a></td>";
 			echo ($currentPage == "Stories" ? "<td class='selected'>" : "<td>");
 				echo "<a href='ADULT_home.php?type=Stories" . $currentOrigin . "'><b>Stories</b></a></td>";
-			echo ($currentPage == "Novels" ? "<td class='selected'>" : "<td>");
-				echo "<a href='ADULT_home.php?type=Novels" . $currentOrigin . "'><b>Novels</b></a></td>";
+			echo ($currentPage == "Books" ? "<td class='selected'>" : "<td>");
+				echo "<a href='ADULT_home.php?type=Books" . $currentOrigin . "'><b>Books</b></a></td>";
 			echo ($currentPage == "Nonfiction" ? "<td class='selected'>" : "<td>");
 				echo "<a href='ADULT_home.php?type=Nonfiction" . $currentOrigin . "'><b>Nonfiction</b></a></td>";
 			echo ($currentPage == "Plays" ? "<td class='selected'>" : "<td>");
@@ -301,6 +305,17 @@ function convertAuthorName($name){
         $name = substr($name, 1);
     }
 	return ucwords($name);
+}
+
+//thanks internet
+function in_array_r($needle, $haystack, $strict = false) {
+    foreach ($haystack as $item) {
+        if (($strict ? $item === $needle : $item == $needle) || (is_array($item) && in_array_r($needle, $item, $strict))) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 ?>

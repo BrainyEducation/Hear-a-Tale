@@ -164,7 +164,15 @@ $isAudio = substr($url, -4) === ".mp3";
 			$type = $exploded[2];
 			?>
 			<a href='ADULT_home.php?origin=<?php echo $origin; ?>&type=<?php echo $type; ?>'>
-				<?php echo explode(" ", $origin)[0] . " " . $type; ?>
+                <?php 
+                    $singularType = $type;
+                    
+                    if ($type === "Books") { $singularType = "Book"; }
+                    else if ($type === "Stories") { $singularType = "Story"; }
+                    else if ($type === "Plays") { $singularType = "Play"; }
+                    else if ($type === "Poetry") { $singularType = "Poem"; }
+                    echo explode(" ", $origin)[0] . " " . $singularType; 
+                ?>
 			</a>
 		</p>
 		<p class="lightLink" style="font-size:175%;"> by
