@@ -37,11 +37,21 @@ if($url != ""){
     if($fixedTitle[0] == " "){
         $fixedTitle = substr($fixedTitle, 1);
     }
+    
     $textFileName = "work_text/" . $fixedTitle;
     if($play['Chapter'] != null){
         $textFileName .= "," . $play['Chapter'];
     }
     $textFileName .= "-" . convertAuthorName($play['Author']) . ".txt";
+    
+    //only use by-chapter texts if there isn't a text for the whole book
+    if($play['Chapter'] != null){
+        $nameNoChapter = "work_text/" . $fixedTitle;
+        $nameNoChapter .= "-" . convertAuthorName($play['Author']) . ".txt";
+        if(file_exists($nameNoChapter)) {
+            $textFileName = $nameNoChapter;
+        }
+    }
 
 }
 

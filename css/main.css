@@ -284,3 +284,11 @@ p.source{
     font-size: 120%;
     line-height: 130%;
 }
+
+.searchWork a:link{
+    color: #303030;
+}
+
+.searchTitle a:link{
+    color: #303030;
+}

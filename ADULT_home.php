@@ -92,10 +92,7 @@ $type = $_GET['type'];
 
 				}
 			}
-			if(count($workData) === 0){
-				if($currentLetter != "") echo "There are no authors under <i>" . $currentLetter . "</i>.";
-				else echo "There are no works or authors in this category.";
-			}
+			
 			foreach($workData as $authorWork){
 
 				?>
@@ -132,9 +129,35 @@ $type = $_GET['type'];
 				</div>
 				<div style="clear: both;"></div>
 
-			<?php } ?>
-
-
+			<?php } if($currentLetter != "") { 
+                $countVisible = count($authors);
+            ?> 
+            
+            <?php foreach(cutDuplicates($catData) as $work) { 
+                if (strpos($work['Title'], $currentLetter) === 0 && $work['FileLocation'] != "") {
+                    if ($countVisible == count($authors) && count($authors) != 0) { //is first work underneath an author
+                        echo "<br>";
+                    }
+                    $countVisible += 1
+            ?>
+        
+            <p class="searchWork" style="font-size:100%; margin-bottom:-5;"> 
+                <a class="searchTitle" style="font-size:130%;" href="ADULT_viewer.php?url=<?php echo $work['FileLocation']; ?>"> 
+                    <?php echo $work['Title']; ?>
+                </a>
+                <b>by <a style="color:#535353" href="ADULT_author.php?author=<?php echo $work['Author'] ?>">
+                    <?php echo convertAuthorName($work['Author']); ?>
+                </a> </b>
+            </p>        
+            
+            <?php }}
+                
+                if($countVisible === 0){
+				    echo "There's nothing here.";
+			     }
+                    
+            } ?>
+            
 		<?php
 		include ($_SERVER['DOCUMENT_ROOT'] . '/globalFooter.php');
 		?>

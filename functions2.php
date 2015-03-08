@@ -286,8 +286,8 @@ function southernTypeHeader($currentPage){
 				echo "<a href='SOUTHERN_home.php?type=Poetry'><b>Poetry</b></a></td>";
 			echo ($currentPage == "Stories" ? "<td class='selected'>" : "<td>");
 				echo "<a href='SOUTHERN_home.php?type=Stories'><b>Stories</b></a></td>";
-			echo ($currentPage == "Novels" ? "<td class='selected'>" : "<td>");
-				echo "<a href='SOUTHERN_home.php?type=Novels'><b>Novels</b></a></td>";
+			echo ($currentPage == "Books" ? "<td class='selected'>" : "<td>");
+				echo "<a href='SOUTHERN_home.php?type=Books'><b>Books</b></a></td>";
 			echo ($currentPage == "Nonfiction" ? "<td class='selected'>" : "<td>");
 				echo "<a href='SOUTHERN_home.php?type=Nonfiction'><b>Nonfiction</b></a></td>";
 		echo "</tr>";
@@ -305,6 +305,16 @@ function convertAuthorName($name){
         $name = substr($name, 1);
     }
 	return ucwords($name);
+}
+
+function cutDuplicates($works) {
+    $noDuplicates = array();
+    foreach($works as $work) {
+        if(!in_array_r($work['Title'], $noDuplicates)) {
+            array_push($noDuplicates, $work);
+        }
+    }
+    return $noDuplicates;
 }
 
 //thanks internet
