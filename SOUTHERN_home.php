@@ -36,7 +36,7 @@ $type = $_GET['type'];
 
 			$thisPage = "SOUTHERN_home.php" . ($type == "" ? "" : "?type=" . $type);
 			$title = "Southern " . ($type == "" || $type  == "All Types" ? "Literature" : $type);
-			$allData = getAllInCategory("Southern Literature");
+			$allData = cutDuplicates(getAllInCategory("Southern Literature"));
 			$showAllAll = ($type == "" || $type == "All Types");
 			$catData = array();
 			if($showAllAll) $catData = $allData;
@@ -88,6 +88,11 @@ $type = $_GET['type'];
 
 				}
 			}
+
+            if ($origin == "" && $type == "") {
+                shuffle($workData);
+            }
+
 			foreach($workData as $authorWork){
 
 				?>
