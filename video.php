@@ -122,6 +122,10 @@ if($url != ""){
 					?>
 
 				});
+                
+                api.bind("error", function (e, err) {
+                    window.setInterval(function(){ location.reload(); }, 3000);
+                });
 
 			});
 		</script>
