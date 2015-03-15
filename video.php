@@ -32,8 +32,22 @@ if($url != ""){
 		for($x = 0; $x < count($fullCategory); $x++){
 			$work = $fullCategory[$x];
 			if($work['FileLocation'] == $url){
-				if($x != 0) $previousVideo = $fullCategory[$x - 1];
-				if($x != (count($fullCategory) - 1)) $nextVideo = $fullCategory[$x + 1];
+				if($x != 0){
+                    $previousVideo = $fullCategory[$x - 1];
+                    $prevOffset = 2;
+                    while ($previousVideo['FileLocation'] == "") {
+                        $previousVideo = $fullCategory[$x - $prevOffset];
+                        $prevOffset++;
+                    }
+                }
+				if($x != (count($fullCategory) - 1)){
+                    $nextVideo = $fullCategory[$x + 1];
+                    $nextOffset = 2;
+                    while ($nextVideo['FileLocation'] == "") {
+                        $nextVideo = $fullCategory[$x + $nextOffset];
+                        $nextOffset++;
+                    }
+                }
 			}
 		}
 	}

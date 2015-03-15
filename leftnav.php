@@ -23,9 +23,9 @@
     <a href="ABOUT_einstein.php"><img src="images/einstein-small.png" style="width:75%; margin-left:5%; max-width:220px;"></a>
     </br></br>
     <p style="width:80%; text-align:center; margin-bottom:0;"><b>Supported by</b></p>
-    <a href="http://teacherquality.coe.uga.edu/"><img src="images/supporters/itq.png" style="width:80%;"></a>   
-    <a href="http://watson-brown.org/"> <img src="images/supporters/watson%20brown.png" style="width:80%;"> </a>
-    <a href="http://www.potashcorp.com/"> <img src="images/supporters/potashcorp.png" style="width:80%;"> </a>
+    <a href="http://teacherquality.coe.uga.edu/"><img src="images/supporters/itq.png" style="width:80%; padding:5px;"></a>   
+    <a href="http://watson-brown.org/"> <img src="images/supporters/watson%20brown.png" style="width:80%; padding:5px;"> </a>
+    <a href="http://www.potashcorp.com/"> <img src="images/supporters/potashcorp.png" style="width:80%; padding:5px;"> </a>
     
 </div>
 

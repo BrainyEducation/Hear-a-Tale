@@ -92,10 +92,6 @@ $type = $_GET['type'];
 
 				}
 			}
-
-            if ($origin == "" && $type == "") {
-                shuffle($workData);
-            }
 			
 			foreach($workData as $authorWork){
 
