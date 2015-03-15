@@ -53,6 +53,8 @@ if($url != ""){
 	}
 
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -108,18 +110,9 @@ if($url != ""){
 				});
 
 				api.bind("finish", function() {
-
-					<?php
-					if($nextVideo != NULL){
-						if(strpos($sourceCategory, '/Stories') == FALSE){
-					?>
-
-					window.location.href = "video.php?url=<?php echo $nextVideo['FileLocation'];?>&cat=<?php echo $sourceCategory;?>"
-
-					<?php
-						}
-					}
-					?>
+					<?php if($nextVideo != NULL){ ?>
+					   window.location.href = "video.php?url=<?php echo $nextVideo['FileLocation'];?>&cat=<?php echo $sourceCategory;?>"
+					<?php } ?>
 
 				});
                 
