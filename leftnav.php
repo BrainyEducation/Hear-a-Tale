@@ -13,10 +13,18 @@
     <div id="sidebar" class="sidebar-left">
         <ul class="menu">
             <li><a href='/'>Home</a></li>
-            <li><a href='children.php'>Children's Section <img style="width:50px" src = "images/section_icons/Children.png" id="children_sidebar"></a></li>
+        </ul>
+        <a href='children.php'>
+            <img style="width:40px; float: left; margin-top:3px; margin-left: 5px;" src = "images/children%20section%20no%20padding.png" id="children_sidebar">
+        </a>
+        <ul class="menu" style="padding-left: 45px;">
+            <li><a href='children.php'>Children's Section</a></li>
+            <li><a href="ABOUT_intro.php" id="about_menu" href='#'>About Children's Section</a></li>
+        </ul>
+        <ul class="menu">
             <li><a href='ADULT_home.php'>Students and Adults</a></li>
             <li><a href='SOUTHERN_home.php'>Southern Literature</a></li>
-            <li><a href="ABOUT_intro.php" id="about_menu" href='#'>About</a></li>
+            <li><a href='ABOUT_SL_intro.php'>About Southern Literature</a></li>
             <li><a href="ABOUT_contact.php" id="about_menu" href='#'>Contact Us</a></li>
         </ul>
     </div>

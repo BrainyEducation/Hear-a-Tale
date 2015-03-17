@@ -66,12 +66,33 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
             <p>&emsp;&emsp;Depending on printers you have available, you can print out posters in black ink or in color, on paper or cardboard, and can choose among three different sizes.  Once posters are printed, in the rows on the left you can write in names of children and then mark an x or checkmark or use a sticker in appropriate boxes to indicate which stories they know—perhaps with different symbols to indicate whether a child listened to a story once or twice or three or more times.  Repeated experiences of a single story are extremely important in helping children learn to better understand and to master new words, phrases, grammatical structures, sentence patterns, and other crucial linguistic elements.  Fluent listeners become fluent readers.</p><p>&emsp;&emsp;A teacher might use one 40-story poster for the entire class, and award students as appropriate a diploma for 20 stories (Expert) or 30 stories (Esteemed Expert) or 40 stories (Highly Esteemed Expert).  The 40-story poster, incidentally, lists 41 story titles (not including the rhyme 'visits') so a child would earn the diploma though skipping one story, or might perhaps skip three stories if the teacher counts each rhyme 'visit' as one story.</p>
             
             <h1 style="padding-top:10px; margin-top:-10px; margin-bottom:-10px; margin-right: 5px; float:left;">Diplomas</h1>
-            <h5 style="display:inline-block; padding-top:10px;">Click image to download options</h5>
-            <br>
-            <a href="images/posters/Diplomas%20for%20Rhymes%20and%20Stories%20Degree.rtf" target="_blank">
-                <img style="width:30%; padding-right:20px; float:left;" src="images/posters/thumbs/diploma%20large%20image.png">
-            </a>
-            <p>&emsp;&emsp;In addition to experiencing multiple retellings of individual stories, it’s extremely important to motivate children to listen to as many new and challenging stories and rhymes as they’re able to enjoy.  To the left you’ll find diplomas which you can print out and award to children who listen to the two rhyme collections and 20 stories (Expert), 30 stories (Esteemed Expert), or 40 stories (Highly Esteemed Expert).  If you’d prefer to change any of the phrasing on the diploma, simply download the file and edit it as you please.  Teachers may prefer to identify the granting authority as the teachers and administrators of the school, may prefer to name the school and school system, may decide to add a place for the principal sign at the bottom in addition to the teacher, or may identify the single signature at the bottom as by the ‘Parent’ rather than the ‘Teacher.’  Diplomas may be printed out in black ink, though some may be printed in color, and may be printed on white or manila or colored paper or card stock.</p>
+            <h5 style="display:inline-block; padding-top:10px;">Click image to download</h5>
+            
+            <table width="100%">
+            <tr>
+                <td></td>
+                <td align="center"><h4>Customizable</h4></td>
+                <td align="center"><h4>20 Stories</h4></td>
+                <td align="center"><h4>30 Stories</h4></td>
+                <td align="center"><h4>40 Stories</h4></td>
+            </tr>
+            <tr>
+                <td align="center"><h4 style="margin-bottom:-10px;">Color</h4></td>
+                <td align="center"></td>
+                <td align="center"><a href="images/posters/diploma%2020.png" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/diploma%2020.png"</a></td>
+                <td align="center"><a href="images/posters/diploma%2030.png" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/diploma%2030.png"</a></td>
+                <td align="center"><a href="images/posters/diploma%2040.png" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/diploma%2040.png"</a></td>
+            </tr>
+            <tr>
+                <td align="center"><h4 style="margin-bottom:-10px;">Black and White</h4></td>
+                <td align="center"><a href="images/posters/Diplomas%20for%20Rhymes%20and%20Stories%20Degree.rtf" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/diploma.png"</a></td>
+                <td align="center"><a href="images/posters/diploma%2020%20BW.png" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/diploma%2020%20BW.png"</a></td>
+                <td align="center"><a href="images/posters/diploma%2030%20BW.png" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/diploma%2030%20BW.png"</a></td>
+                <td align="center"><a href="images/posters/diploma%2040%20BW.png" target="_blank"><img style="max-width:162px; margin-bottom: 10px;" src="images/posters/thumbs/diploma%2040%20BW.png"</a></td>
+            </tr>
+            </table>
+            
+            <p>&emsp;&emsp;In addition to experiencing multiple retellings of individual stories, it’s extremely important to motivate children to listen to as many new and challenging stories and rhymes as they’re able to enjoy.  Above you’ll find diplomas which you can print out and award to children who listen to the two rhyme collections and 20 stories (Expert), 30 stories (Esteemed Expert), or 40 stories (Highly Esteemed Expert).  If you’d prefer to change any of the phrasing on the diploma, simply download the file and edit it as you please.  Teachers may prefer to identify the granting authority as the teachers and administrators of the school, may prefer to name the school and school system, may decide to add a place for the principal sign at the bottom in addition to the teacher, or may identify the single signature at the bottom as by the ‘Parent’ rather than the ‘Teacher.’  Diplomas may be printed out in black ink, though some may be printed in color, and may be printed on white or manila or colored paper or card stock.</p>
             
 			<h1>Online Resources</h1>
 			<h3>TV News Stories</h3>

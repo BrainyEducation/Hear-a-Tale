@@ -241,6 +241,43 @@ function aboutHeader($currentPage){
 	echo "</table><br>";
 }
 
+function aboutHeaderSouthern($currentPage){
+	echo "<table class='header' style='width:100%;'>";
+		echo "<tr align='center' valign='top'>";
+			echo ($currentPage == "Introduction" ? "<td class='selected'>" : "<td>");
+				echo "<a href=ABOUT_SL_intro.php><b>Introduction</b></a></td>";
+			echo ($currentPage == "Voices" ? "<td class='selected'>" : "<td>");
+				echo "<a href=ABOUT_SL_voices.php><b>Voices</b></a></td>";
+			echo ($currentPage == "Dialects" ? "<td class='selected'>" : "<td>");
+				echo "<a href=ABOUT_SL_dialects.php><b>Dialects</b></a></td>";
+			echo ($currentPage == "Biographies" ? "<td class='selected'>" : "<td>");
+				echo "<a href=ABOUT_SL_bios.php><b>Biographies</b></a></td>";
+		echo "</tr>";
+	echo "</table>";
+    
+    //create author bar
+    echo "<div style='width:100%; height: 70px; overflow:hidden; white-space:nowrap;'>";
+    $catData = getAllInCategory("Southern Literature");
+	$data = array();
+	$authors = array();
+	foreach($catData as $work){
+		if($work['Author'] == "" || is_null($work['Author'])) continue;
+		if(!in_array($work['Author'], $authors)){
+			array_push($data, $work);
+			array_push($authors, $work['Author']);
+		}
+	}
+	shuffle($data);
+    foreach($data as $authorWork) {
+        echo "<a href='SOUTHERN_author.php?author=" . $authorWork['Author'] . "'>";
+        echo '<img style="height:70px;" src="Thumbnails/' . $authorWork['ThumbnailImage'] . '">';
+        echo "</a>";
+    }
+    echo "</div>";
+    echo "<div style='width:100%; height: 3px; background-color:#808080'></div>";
+    echo "<br>";
+}
+
 function adultOriginHeader($currentPage, $currentType){
 	if($currentType != "") $currentType = ("&type=" . $currentType);
 	echo "<table class='header' style='width:100%;'>";
