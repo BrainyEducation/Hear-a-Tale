@@ -31,8 +31,9 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 			<div style="clear: both;"></div>
 			<?php aboutHeader("Why Classic Stories Matter"); ?>
 
-			<h1>Why Classic Rhymes and Stories Matter</h1>
+			<h1 style="text-align: center; width:100%;">Why Classic Rhymes and Stories Matter</h1>
             
+            <div style="width:80%; margin-left:10%; margin-right:10%;">
 			<p>A rare child might find joy in almost every rhyme and story and picture on the site; some may dislike them all.  Given the opportunity, many children will discover they like some rhymes, a few tales, but may find the rest boring, and after dallying with the site a while, will reject these book-like presentations for a movie or tv show or video game that renders them passive by stimulating their senses far more than their minds.  God bless them.</p>
 
 			<p>Still, we believe—and the research demonstrates—that the more time young children spend with nursery rhymes and classic fables and folk tales and fairy tales, the more efficiently they develop a wide variety of linguistic abilities, the more quickly they become literate, and the more successful they are in school and beyond school.</p>
@@ -53,6 +54,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 			</ul>
 
 			<p>No one is smart enough to know which stories and rhymes and pictures children need most or how to design them, but generations and generations of children (our own young selves among them) have helped figure out which ones work best.  Many of them are on this site.  None of us will ever know what all these are worth or, even if we did know, could ever figure out how to pay for them.  What they offer children is invaluable.  Maybe that’s why they’re free.</p>
+            </div>
 
 
 		<?php

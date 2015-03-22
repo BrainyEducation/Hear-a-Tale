@@ -31,8 +31,8 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 			<div style="clear: both;"></div>
 
 			<?php aboutHeader("History of the Project"); ?>
-			<h1>History of the Project</p></h1>
-
+			<h1 style="width:100%; text-align:center;">History of the Project</p></h1>
+            <div style="width:80%; margin-left:10%; margin-right:10%;">
 			<p>Educational research constantly reminds us that regularly hearing stories and rhymes is crucial for preparing young children to succeed in school and later in life.  Television, even children’s educational  programs, can’t fill the void.  To enable children to hear stories even when there is no adult to read to them, I had a dream of creating audio CDs of fairy tales and nursery rhymes to distribute free.   In 2006 we began recording fairy tales in the office of Edgar LaMotte, then the Manager of Augusta State University’s Media Center.   We had no studio, but Edgar’s talent and resourcefulness as audio engineer gave us an excellent start on an ambitious project.  I had no budget, however, and no realistic prospects for acquiring one.</p>
 
 			<p>Service on a 2007-2008 University System of Georgia committee to study the core curriculum earned me a salary supplement of $3000.  This supplement funded an extremely successful October 2008 production of Sophocles’ <em>Antigone</em>, directed by Rick Davis, aimed primarily at high school and college students.  The production earned nearly $5000, which, with the help of Dr. Lillie Johnson (who provided endless guidance and assistance), I was able to spend on this project.  I rented time in the university Communications Lab’s audio studio and began recording with student audio engineers Lindsey Hart and Chris Pope, who quickly developed superb editing skills.  Through the years Augusta State University faculty, students, staff, and community members performed as readers.  (You can find their names in the Acknowledgments section.)  Their hard work culminated in the more than two hours of nursery rhymes and more than eight hours of stories, plus longer children’s works like <em>Alice and Wonderland</em> and the Brer Rabbit stories gathered on this site.</p>
@@ -53,7 +53,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 
 
 			<a id="acknowledgements"></a>
-			<h1>Acknowledgements</p></h1>
+			<h1 style="width:100%; text-align:center;">Acknowledgements</p></h1>
 
 			<h4>Production</h4>
 			<table width="700px">
@@ -98,10 +98,6 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 					<td>Digital Art Jerrold (colored Jerrold B&W images)</td>
 				</tr>
 				<tr>
-					<td>Jacob Wall</td>
-					<td>Digital Art</td>
-				</tr>
-				<tr>
 					<td>Joey Hart</td>
 					<td>Digital Art</td>
 				</tr>
@@ -115,6 +111,10 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 				</tr>
 				<tr>
 					<td>Tracie Grace Riesgo</td>
+					<td>Digital Art</td>
+				</tr>
+                <tr>
+					<td>Jacob Wall</td>
 					<td>Digital Art</td>
 				</tr>
 				<tr>

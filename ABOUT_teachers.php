@@ -30,7 +30,8 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 		<div class="span9" style="margin-left:5px; margin-right:5px;">
 			<div style="clear: both;"></div>
 			<?php aboutHeader("To Teachers"); ?>
-			<h1>To Teachers</h1>
+			<h1 style="width:100%; text-align:center;">To Teachers</h1>
+            <div style="width:80%; margin-left:10%; margin-right:10%;">
 
 			<p>You have too much to do, too little time and very little, if any, of that is free or discretionary time.  This site can extend the school day for you, can help your students do valuable work outside of class if you can find ways to encourage the children to regularly watch and listen, and if you can encourage parents sit beside them to talk and ask questions and to praise the children for reciting rhymes and retelling stories.</p>
 
@@ -65,6 +66,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 			<p>For decades educational research has repeatedly demonstrated how fundamentally important it is for children to hear texts read aloud.  Nevertheless, unfortunate children whose environments provide the least experience of sophisticated verbalization tend to have parents or caregivers who rarely read to them.  With your help and encouragement, this site will empower these children, will allow them to decide when to hear verbally rich stories and nursery rhymes, and how long to keep listening.</p>
 
 			<p>(Teachers interested in earning two PLUs (professional learning units) through an online 20-hour course on using rhymes and stories to promote literacy and pre-literacy should email us at <a href="mailto:rhymeazoo@gru.edu">rhymeazoo@gru.edu</a>)</p>
+            </div>
 
 
 		<?php
