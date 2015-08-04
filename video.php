@@ -191,11 +191,11 @@ if($url != ""){
 		data-ratio="0.5625" data-embed="false">
 			<?php if(substr($url, -4) === ".mp3"){ ?>
 			<audio controls preload="auto">
-				<source type="audio/mp3" src="http://podcasting.gcsu.edu/4DCGI/Podcasting/GRU/Episodes/<?php echo $url;	?>" >
+				<source type="audio/mp3" src="podcasting/<?php echo $url;	?>" >
 			</audio>
 			<?php } else { ?>
 			<video preload="auto">
-				<source type="video/mp4" src="http://podcasting.gcsu.edu/4DCGI/Podcasting/GRU/Episodes/<?php echo $url;	?>"/>
+				<source type="video/mp4" src="podcasting/<?php echo $url;	?>"/>
 			</video>
 			<?php } ?>
 		</div>
