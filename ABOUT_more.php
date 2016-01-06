@@ -30,6 +30,18 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 		<div class="span9" style="margin-left:5px; margin-right:5px;">
 			<div style="clear: both;"></div>
 			<?php aboutHeader("Resources"); ?>
+            
+            <h1 style="padding-top:10px; margin-top:-10px; margin-bottom:-10px; margin-right: 5px; float:left;">Home Experiences - 50 Stories</h1>
+            <h5 style="display:inline-block; padding-top:10px;">Click image to download</h5>
+            <div style="clear: both;"></div>
+            <p></p>
+            <a style="margin:40px;" href="images/Home%20Experiences%20Booklet%2010%20Oct.pdf" target="_blank">
+                <img style="max-width:162px; margin-bottom: 10px; border:1px solid #d9d9d9" src="images/Home%20Experiences%20Booklet%2010%20Oct%20thumbnail.png">
+            </a>
+            <p></p>
+            <div style="clear: both;"></div>
+            
+            
             <h1 style="padding-top:10px; margin-top:-10px; margin-bottom:-10px; margin-right: 5px; float:left;">Classroom Posters</h1>
             <h5 style="display:inline-block; padding-top:10px;">Click image to download</h5>
             <table width="100%">

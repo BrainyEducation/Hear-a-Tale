@@ -33,6 +33,8 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/functions2.php');
 			<h1 style="width:100%; text-align:center;">To Teachers</h1>
             <div style="width:80%; margin-left:10%; margin-right:10%;">
 
+                <p style="width:70%; padding-top: 10px; margin-left:19%; margin-right:15%;">Please check our <b>Resources</b> link (the red balloon) for suggested Home Experiences (simple homework exercises) for 50 stories, and for charts, diplomas, and other resources classroom teachers might find helpful.</br></br></p>
+                
 			<p>You have too much to do, too little time and very little, if any, of that is free or discretionary time.  This site can extend the school day for you, can help your students do valuable work outside of class if you can find ways to encourage the children to regularly watch and listen, and if you can encourage parents sit beside them to talk and ask questions and to praise the children for reciting rhymes and retelling stories.</p>
 
 			<p>In your classroom you might find a place for a chart on which each child earns a check or smiley face for speaking a rhyme or telling a story.</p>
